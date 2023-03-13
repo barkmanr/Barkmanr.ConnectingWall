@@ -13,6 +13,7 @@ namespace Connecting_wall.Logic
         private List<string> _items = new List<string>();
         private List<string> _description = new List<string>();
         private string _connection;
+        private QuestionType _type;
 
         public List<string> Item
         {
@@ -43,6 +44,17 @@ namespace Connecting_wall.Logic
                 if (string.IsNullOrEmpty(value))
                     throw new Exception("Must have an input");
                 _connection = value;
+            }
+        }
+
+        public QuestionType Type
+        {
+            get { return _type; }
+            private set
+            {
+                if (!Enum.IsDefined(typeof(QuestionType), value))
+                    throw new Exception("Invalid Question Type");
+                _type = value;
             }
         }
 

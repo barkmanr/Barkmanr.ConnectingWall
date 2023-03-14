@@ -136,5 +136,50 @@ namespace Connecting_wall.Logic
                 "Things that go boom in video games", QuestionType.Normal));
         }
 
+        public Question GetRound1Question(int x)
+        {
+            if (x > 5 || x < 0)
+                throw new Exception("Must be in range 0-5");
+            return _round1[x];
+        }
+        public Question GetRound2Question(int x)
+        {
+            if (x > 5 || x < 0)
+                throw new Exception("Must be in range 0-5");
+            return _round2[x];
+        }
+
+        public List<Question> GetRound3AQuestions()
+        {
+            return _round3A;
+        }
+
+        public List<Question> GetRound3BQuestions()
+        {
+            return _round3A;
+        }
+
+        public bool CheckRound3AQuestions(string a,string b,string c,string d)
+        {
+            foreach (Question question in Round3A)
+            {
+                bool isTrue = question.CheckItems(a,b,c,d);
+                if (isTrue == true)
+                    return true;
+            }
+            return false;
+        }
+
+        public bool CheckRound3BQuestions(string a, string b, string c, string d)
+        {
+            foreach (Question question in Round3B)
+            {
+                bool isTrue = question.CheckItems(a, b, c, d);
+                if (isTrue == true)
+                    return true;
+            }
+            return false;
+        }
+
     }
 }

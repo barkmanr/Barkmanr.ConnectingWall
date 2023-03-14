@@ -58,11 +58,12 @@ namespace Connecting_wall.Logic
             }
         }
 
-        public Question(List<string> items,List<string> description, string connection) 
+        public Question(List<string> items,List<string> description, string connection,QuestionType type) 
         {
             Item = items;
             Description = description;
             Connection = connection;
+            Type = type;
         }
 
 

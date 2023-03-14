@@ -149,16 +149,6 @@ namespace Connecting_wall.Logic
             return _round2[x];
         }
 
-        public List<Question> GetRound3AQuestions()
-        {
-            return _round3A;
-        }
-
-        public List<Question> GetRound3BQuestions()
-        {
-            return _round3A;
-        }
-
         public bool CheckRound3AQuestions(string a,string b,string c,string d)
         {
             foreach (Question question in Round3A)

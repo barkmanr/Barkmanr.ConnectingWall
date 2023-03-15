@@ -8,34 +8,34 @@ using System.Threading.Tasks;
 
 namespace Connecting_wall.Logic
 {
-    public class QuestionList
+    public static class QuestionList
     {
-        private List<Question> _round1 = new List<Question>();
-        private List<Question> _round2 = new List<Question>();
-        private List<Question> _round3A = new List<Question>();
-        private List<Question> _round3B = new List<Question>();
+        private static List<Question> _round1 = new List<Question>();
+        private static List<Question> _round2 = new List<Question>();
+        private static List<Question> _round3A = new List<Question>();
+        private static List<Question> _round3B = new List<Question>();
 
-        public IReadOnlyCollection<Question> Round1
+        public static IReadOnlyCollection<Question> Round1
         {
             get { return _round1; }
         }
 
-        public IReadOnlyCollection<Question> Round2
+        public static IReadOnlyCollection<Question> Round2
         {
             get { return _round2; }
         }
 
-        public IReadOnlyCollection<Question> Round3A
+        public static IReadOnlyCollection<Question> Round3A
         {
             get { return _round3A; }
         }
-        public IReadOnlyCollection<Question> Round3B
+        public static IReadOnlyCollection<Question> Round3B
         {
             get { return _round3B; }
         }
 
         //This will be eddited later on
-        public void SetUpQuestions1()
+        public static void SetUpQuestions1()
         {
             _round1.Add(new Question(new List<string> { "Brian Jones", "Jimi Hendrix", "Jordan Cross", "Kurt Kobain" }, new List<string>
             { "founder and original leader of the rolling stones(1942 - 1969)", "Considered one of the greatest Guitarists. (1942 - 1970)", 
@@ -67,7 +67,7 @@ namespace Connecting_wall.Logic
 
         }
 
-        public void SetUpQuestions2()
+        public static void SetUpQuestions2()
         {
             _round2.Add(new Question(new List<string> { "Eleven", "One hundred", "One hundred and One", "One hundred and ten" }, new List<string>
             { "11 = 3", "100 = 4","101 = 5","110 = 6" },
@@ -95,7 +95,7 @@ namespace Connecting_wall.Logic
                 "Game of RPS", QuestionType.Image));
         }
 
-        public void SetUpQuestions3A()
+        public static void SetUpQuestions3A()
         {
             _round3A.Add(new Question(new List<string> { "Hatch", "Fabio", "Cochran", "Boston Rob" }, new List<string>
             { "Richard Hatch - Season 1", "Jud “Fabio” Birza - Season 21","John Cochran - Season 26","Rob Marino - Season 22" },
@@ -115,7 +115,7 @@ namespace Connecting_wall.Logic
                 "Writing Utensils.", QuestionType.Normal));
         }
 
-        public void SetUpQuestions3B()
+        public static void SetUpQuestions3B()
         {
             _round3B.Add(new Question(new List<string> { "Apple", "Chipotle", "Dunkin Donuts", "KFC" }, new List<string>
             { "apple", "dried ripe jalapeño chili pepper","doughnut","C = Chicken" },
@@ -136,20 +136,20 @@ namespace Connecting_wall.Logic
                 "Things that go boom in video games", QuestionType.Normal));
         }
 
-        public Question GetRound1Question(int x)
+        public static Question GetRound1Question(int x)
         {
             if (x > 5 || x < 0)
                 throw new Exception("Must be in range 0-5");
             return _round1[x];
         }
-        public Question GetRound2Question(int x)
+        public static Question GetRound2Question(int x)
         {
             if (x > 5 || x < 0)
                 throw new Exception("Must be in range 0-5");
             return _round2[x];
         }
 
-        public bool CheckRound3AQuestions(string a,string b,string c,string d)
+        public static bool CheckRound3AQuestions(string a,string b,string c,string d)
         {
             foreach (Question question in Round3A)
             {
@@ -160,7 +160,7 @@ namespace Connecting_wall.Logic
             return false;
         }
 
-        public bool CheckRound3BQuestions(string a, string b, string c, string d)
+        public static bool CheckRound3BQuestions(string a, string b, string c, string d)
         {
             foreach (Question question in Round3B)
             {
@@ -169,6 +169,14 @@ namespace Connecting_wall.Logic
                     return true;
             }
             return false;
+        }
+
+        public static void SetUpAllQuestions()
+        {
+            SetUpQuestions1();
+            SetUpQuestions2();
+            SetUpQuestions3A();
+            SetUpQuestions3B();
         }
 
     }

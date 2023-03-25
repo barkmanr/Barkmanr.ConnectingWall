@@ -10,8 +10,23 @@
         </Grid>
 
         <!--This is the middle grid / Make changes in here -->
-        <Grid>
-            
+        <Grid RowDefinitions="*,*,*,*" ColumnDefinitions="*,*,*,*" Grid.Row="1">
+            <Button Grid.Row="0" Grid.Column="0" x:Name="CWB1"/>
+            <Button Grid.Row="0" Grid.Column="1" x:Name="CWB2"/>
+            <Button Grid.Row="0" Grid.Column="2" x:Name="CWB3"/>
+            <Button Grid.Row="0" Grid.Column="3" x:Name="CWB4"/>
+            <Button Grid.Row="1" Grid.Column="0" x:Name="CWB5"/>
+            <Button Grid.Row="1" Grid.Column="1" x:Name="CWB6"/>
+            <Button Grid.Row="1" Grid.Column="2" x:Name="CWB7"/>
+            <Button Grid.Row="1" Grid.Column="3" x:Name="CWB8"/>
+            <Button Grid.Row="2" Grid.Column="0" x:Name="CWB9"/>
+            <Button Grid.Row="2" Grid.Column="1" x:Name="CWB10"/>
+            <Button Grid.Row="2" Grid.Column="2" x:Name="CWB11"/>
+            <Button Grid.Row="2" Grid.Column="3" x:Name="CWB12"/>
+            <Button Grid.Row="3" Grid.Column="0" x:Name="CWB13"/>
+            <Button Grid.Row="3" Grid.Column="1" x:Name="CWB14"/>
+            <Button Grid.Row="3" Grid.Column="2" x:Name="CWB15"/>
+            <Button Grid.Row="3" Grid.Column="3" x:Name="CWB16"/>
         </Grid>
         
         <!--This is the bottom grid-->
@@ -39,6 +54,9 @@
                 <Button Grid.Row="0" Grid.Column="1" Text="↑"/>
                 <Button Grid.Row="1" Grid.Column="1" Text="↓"/>
             </Grid>
+
+            <Button Grid.Row="0" Grid.Column="0" Text="Check" x:Name="CwBtnCheck"/>
+            <Button Grid.Row="0" Grid.Column="2" Text="Next"  x:Name="CwBtnNext"/>
         </Grid>
         
         

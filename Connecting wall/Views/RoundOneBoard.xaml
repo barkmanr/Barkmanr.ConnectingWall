@@ -3,11 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Connecting_wall.Views.RoundOneBoard"
              Title="RoundOneBoard">
-    <Grid>
-        <Grid RowDefinitions="*,2*,.5*,*,*,*" ColumnDefinitions="*,*,*,*,*">
-            <!--The header label-->
+    <Grid RowDefinitions="3.5*,3*">
+        <Grid Grid.Row="0" RowDefinitions="0.5*,*,2*,*" ColumnDefinitions="*,*,*,*">
             <Label 
-                Grid.Row="0" Grid.Column="2"
+                Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
                 Text="Round 1" 
                 HorizontalOptions="Center"
                 FontSize="Title" 
@@ -16,7 +15,7 @@
             <!--Image controls to show reveal the items-->
             <Image
                    x:Name="Item1" 
-                   Grid.Row="1" Grid.Column="0" 
+                   Grid.Row="2" Grid.Column="0" 
                    HorizontalOptions="Center"
                    Margin="5"
                    Aspect="AspectFit"
@@ -24,7 +23,7 @@
 
             <Image
                    x:Name="Item2" 
-                   Grid.Row="1" Grid.Column="1" 
+                   Grid.Row="2" Grid.Column="1" 
                    HorizontalOptions="Center"
                    Margin="5"
                    Aspect="AspectFit"
@@ -32,7 +31,7 @@
 
             <Image
                    x:Name="Item3" 
-                   Grid.Row="1" Grid.Column="2" 
+                   Grid.Row="2" Grid.Column="2" 
                    HorizontalOptions="Center"
                    Margin="5"
                    Aspect="AspectFit"
@@ -40,46 +39,69 @@
 
             <Image
                    x:Name="Item4" 
-                   Grid.Row="1" Grid.Column="3" 
+                   Grid.Row="2" Grid.Column="3" 
                    HorizontalOptions="Center"
                    Margin="5"
                    Aspect="AspectFit"
                    Source="question_mark.png"/>
+            <Label
+                   x:Name="Point1Label" 
+                   Grid.Row="1" Grid.Column="3"
+                   HorizontalOptions="Center" VerticalOptions="Center" 
+                   Margin="5"
+                   FontSize="Medium"
+                   Text="1 Point"/>
+            <Label
+                   x:Name="Point2Label" 
+                   Grid.Row="1" Grid.Column="2"
+                   HorizontalOptions="Center" VerticalOptions="Center" 
+                   Margin="5"
+                   FontSize="Medium"
+                   Text="2 Point"/>
 
+            <Label
+                   x:Name="Point3Label" 
+                   Grid.Row="1" Grid.Column="1"
+                   HorizontalOptions="Center" VerticalOptions="Center" 
+                   Margin="5"
+                   FontSize="Medium"
+                   Text="3 Point"/>
+            <Label
+                   x:Name="Point5Label" 
+                   Grid.Row="1" Grid.Column="0"
+                   HorizontalOptions="Center" VerticalOptions="Center" 
+                   Margin="5"
+                   FontSize="Medium"
+                   Text="5 Point"/>
 
-            <Grid 
-                Grid.Row="2"             
-                ColumnDefinitions="*,*,*" 
-                Margin="2">
-
-            </Grid>
-
-            <!--Label to show the connection-->
             <Label
                    x:Name="Answer" 
-                   Grid.Row="1" Grid.Column="4" 
+                   Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4"
                    HorizontalOptions="Center" VerticalOptions="Center" 
                    Margin="5"
                    FontSize="Medium"
                    Text="Answer: "/>
 
+        </Grid>
+        <Grid Grid.Row="1" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*,*,*">
+
             <!--Labels to show both teams scores-->
             <Label 
                    x:Name="Team1ScoreLabel" 
-                   Grid.Row="3" Grid.Column="0"            
+                   Grid.Row="0" Grid.Column="0"            
                    HorizontalOptions="Center" VerticalOptions="Center" 
                    FontSize="Medium"
                    Text="Team 1 Score: 0" />
             <Label 
                    x:Name="Team2ScoreLabel" 
-                   Grid.Row="3" Grid.Column="5" 
+                   Grid.Row="0" Grid.Column="1" 
                    HorizontalOptions="Center" VerticalOptions="Center" 
                    FontSize="Medium"
                    Text="Team 2 Score: 0" />
 
             <Button
                     x:Name="RevealButton" 
-                    Grid.Row="4" Grid.Column="2"
+                    Grid.Row="1" Grid.Column="3"
                     Margin="5"
                     FontSize="Medium"
                     Text="Reveal" 
@@ -88,7 +110,7 @@
                     IsEnabled="True"/>
             <Button
                     x:Name="AnswerButton" 
-                    Grid.Row="5" Grid.Column="2"
+                    Grid.Row="2" Grid.Column="3"
                     Margin="5"
                     FontSize="Medium"
                     Text="Answer" 
@@ -97,7 +119,7 @@
                     IsEnabled="True"/>
             <Button
                     x:Name="Team1UpButton" 
-                    Grid.Row="4" Grid.Column="5"
+                    Grid.Row="1" Grid.Column="1"
                     Margin="5"
                     FontSize="Medium"
                     Text="+" 
@@ -106,7 +128,7 @@
                     IsEnabled="True"/>
             <Button
                     x:Name="Team1DownButton" 
-                    Grid.Row="5" Grid.Column="5"
+                    Grid.Row="2" Grid.Column="1"
                     Margin="5"
                     FontSize="Medium"
                     Text="-" 
@@ -115,7 +137,7 @@
                     IsEnabled="True"/>
             <Button
                     x:Name="Team2UpButton" 
-                    Grid.Row="4" Grid.Column="0"
+                    Grid.Row="1" Grid.Column="0"
                     Margin="5"
                     FontSize="Medium"
                     Text="+" 
@@ -124,12 +146,21 @@
                     IsEnabled="True"/>
             <Button
                     x:Name="Team2DownButton" 
-                    Grid.Row="5" Grid.Column="0"
+                    Grid.Row="2" Grid.Column="0"
                     Margin="5"
                     FontSize="Medium"
                     Text="-" 
                     BackgroundColor="Pink"
                     Clicked="WhenDownClicked2"
+                    IsEnabled="True"/>
+            <Button
+                    x:Name="NextButton" 
+                    Grid.Row="1" Grid.Column="4" Grid.RowSpan="2"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="Back" 
+                    BackgroundColor="PeachPuff"
+                    Clicked="WhenAnswerClicked"
                     IsEnabled="True"/>
         </Grid>
     </Grid>

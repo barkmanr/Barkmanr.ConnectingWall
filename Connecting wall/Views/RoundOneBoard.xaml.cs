@@ -75,4 +75,9 @@ public partial class RoundOneBoard : ContentPage
             Team1ScoreLabel.Text = scoreMessage;
         }
     }
+
+    private void BackClicked(object sender, EventArgs e)
+    {
+
+    }
 }

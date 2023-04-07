@@ -46,22 +46,22 @@
                    Text="Team 2 Score: 0" />
 
             <Button
-                    x:Name="RevealButton" 
+                    x:Name="CheckButton" 
                     Grid.Row="1" Grid.Column="3"
                     Margin="5"
                     FontSize="Medium"
-                    Text="Reveal" 
+                    Text="Check" 
                     BackgroundColor="LightBlue"
-                    Clicked="WhenRevealedClicked"
+                    Clicked="CheckCliked"
                     IsEnabled="True"/>
             <Button
-                    x:Name="AnswerButton" 
+                    x:Name="TimerButton" 
                     Grid.Row="2" Grid.Column="3"
                     Margin="5"
                     FontSize="Medium"
-                    Text="Answer" 
+                    Text="Start Timer" 
                     BackgroundColor="LightBlue"
-                    Clicked="WhenAnswerClicked"
+                    Clicked="TimerButtonClicked"
                     IsEnabled="True"/>
             <Button
                     x:Name="Team1UpButton" 
@@ -104,9 +104,9 @@
                     Grid.Row="1" Grid.Column="4" Grid.RowSpan="2"
                     Margin="5"
                     FontSize="Medium"
-                    Text="Back" 
+                    Text="Next" 
                     BackgroundColor="PeachPuff"
-                    Clicked="WhenAnswerClicked"
+                    Clicked="NextClicked"
                     IsEnabled="True"/>
         </Grid>
 

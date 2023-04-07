@@ -9,7 +9,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate Views:RoundOneBoard}"
+        ContentTemplate="{DataTemplate Views:ConnectingWall}"
         Route="MainPage" />
 
 </Shell>

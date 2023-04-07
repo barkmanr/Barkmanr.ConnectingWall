@@ -3,61 +3,111 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Connecting_wall.Views.ConnectingWall"
              Title="ConnectingWall">
-    
-    <Grid RowDefinitions="*,3*,*">
-        <!-- This is the top grid-->
-        <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*,*" Grid.Row="0" BackgroundColor="LightCoral">
 
-        </Grid>
+    <Grid RowDefinitions="3.5*,3*">
 
-        <!--This is the middle grid / Make changes in here -->
-        <Grid RowDefinitions="*,*,*,*" ColumnDefinitions="*,*,*,*" Grid.Row="1">
-            <Button Grid.Row="0" Grid.Column="0" x:Name="CWB1"/>
-            <Button Grid.Row="0" Grid.Column="1" x:Name="CWB2"/>
-            <Button Grid.Row="0" Grid.Column="2" x:Name="CWB3"/>
-            <Button Grid.Row="0" Grid.Column="3" x:Name="CWB4"/>
-            <Button Grid.Row="1" Grid.Column="0" x:Name="CWB5"/>
-            <Button Grid.Row="1" Grid.Column="1" x:Name="CWB6"/>
-            <Button Grid.Row="1" Grid.Column="2" x:Name="CWB7"/>
-            <Button Grid.Row="1" Grid.Column="3" x:Name="CWB8"/>
-            <Button Grid.Row="2" Grid.Column="0" x:Name="CWB9"/>
-            <Button Grid.Row="2" Grid.Column="1" x:Name="CWB10"/>
-            <Button Grid.Row="2" Grid.Column="2" x:Name="CWB11"/>
-            <Button Grid.Row="2" Grid.Column="3" x:Name="CWB12"/>
-            <Button Grid.Row="3" Grid.Column="0" x:Name="CWB13"/>
-            <Button Grid.Row="3" Grid.Column="1" x:Name="CWB14"/>
-            <Button Grid.Row="3" Grid.Column="2" x:Name="CWB15"/>
-            <Button Grid.Row="3" Grid.Column="3" x:Name="CWB16"/>
+        <!--This is the top grid / Make main changes in here -->
+        <Grid RowDefinitions="0.5*,*,*,*,*" ColumnDefinitions="*,*,*,*" Grid.Row="0">
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="Connecting Wall" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold"/>
+            <Button Grid.Row="1" Grid.Column="0" x:Name="CWB1" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="1" Grid.Column="1" x:Name="CWB2" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="1" Grid.Column="2" x:Name="CWB3" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="1" Grid.Column="3" x:Name="CWB4" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="2" Grid.Column="0" x:Name="CWB5" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="2" Grid.Column="1" x:Name="CWB6" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="2" Grid.Column="2" x:Name="CWB7" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="2" Grid.Column="3" x:Name="CWB8" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="3" Grid.Column="0" x:Name="CWB9" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="3" Grid.Column="1" x:Name="CWB10" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="3" Grid.Column="2" x:Name="CWB11" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="3" Grid.Column="3" x:Name="CWB12" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="4" Grid.Column="0" x:Name="CWB13" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="4" Grid.Column="1" x:Name="CWB14" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="4" Grid.Column="2" x:Name="CWB15" BackgroundColor="PeachPuff"/>
+            <Button Grid.Row="4" Grid.Column="3" x:Name="CWB16" BackgroundColor="PeachPuff"/>
         </Grid>
 
         <!--This is the bottom grid-->
-        <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*,*" Grid.Row="2" BackgroundColor="LightCoral">
-            <Label Grid.Row="1" Grid.Column="0"
-                   Text="Team 1"/>
 
-            <!--This will be the numeric up down-->
-            <Grid RowDefinitions="*,*" ColumnDefinitions="2*,*" Grid.Row="2" Grid.Column="0">
-                <Label Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
-                       Text="0"/>
+        <Grid Grid.Row="1" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*,*,*">
 
-                <Button Grid.Row="0" Grid.Column="1" Text="↑"/>
-                <Button Grid.Row="1" Grid.Column="1" Text="↓"/>
-            </Grid>
+            <!--Labels to show both teams scores-->
+            <Label 
+                   x:Name="Team1ScoreLabel" 
+                   Grid.Row="0" Grid.Column="0"            
+                   HorizontalOptions="Center" VerticalOptions="Center" 
+                   FontSize="Medium"
+                   Text="Team 1 Score: 0" />
+            <Label 
+                   x:Name="Team2ScoreLabel" 
+                   Grid.Row="0" Grid.Column="1" 
+                   HorizontalOptions="Center" VerticalOptions="Center" 
+                   FontSize="Medium"
+                   Text="Team 2 Score: 0" />
 
-            <Label Grid.Row="1" Grid.Column="2" 
-                   Text="Team 2"/>
-
-            <!--This will be the numeric up down-->
-            <Grid RowDefinitions="*,*" ColumnDefinitions="2*,*" Grid.Row="2" Grid.Column="2">
-                <Label Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
-                       Text="0"/>
-
-                <Button Grid.Row="0" Grid.Column="1" Text="↑"/>
-                <Button Grid.Row="1" Grid.Column="1" Text="↓"/>
-            </Grid>
-
-            <Button Grid.Row="0" Grid.Column="0" Text="Check" x:Name="CwBtnCheck"/>
-            <Button Grid.Row="0" Grid.Column="2" Text="Next"  x:Name="CwBtnNext"/>
+            <Button
+                    x:Name="RevealButton" 
+                    Grid.Row="1" Grid.Column="3"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="Reveal" 
+                    BackgroundColor="LightBlue"
+                    Clicked="WhenRevealedClicked"
+                    IsEnabled="True"/>
+            <Button
+                    x:Name="AnswerButton" 
+                    Grid.Row="2" Grid.Column="3"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="Answer" 
+                    BackgroundColor="LightBlue"
+                    Clicked="WhenAnswerClicked"
+                    IsEnabled="True"/>
+            <Button
+                    x:Name="Team1UpButton" 
+                    Grid.Row="1" Grid.Column="1"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="+" 
+                    BackgroundColor="PaleGreen"
+                    Clicked="WhenUpClicked1"
+                    IsEnabled="True"/>
+            <Button
+                    x:Name="Team1DownButton" 
+                    Grid.Row="2" Grid.Column="1"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="-" 
+                    BackgroundColor="Pink"
+                    Clicked="WhenDownClicked1"
+                    IsEnabled="True"/>
+            <Button
+                    x:Name="Team2UpButton" 
+                    Grid.Row="1" Grid.Column="0"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="+" 
+                    BackgroundColor="PaleGreen"
+                    Clicked="WhenUpClicked2"
+                    IsEnabled="True"/>
+            <Button
+                    x:Name="Team2DownButton" 
+                    Grid.Row="2" Grid.Column="0"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="-" 
+                    BackgroundColor="Pink"
+                    Clicked="WhenDownClicked2"
+                    IsEnabled="True"/>
+            <Button
+                    x:Name="NextButton" 
+                    Grid.Row="1" Grid.Column="4" Grid.RowSpan="2"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="Back" 
+                    BackgroundColor="PeachPuff"
+                    Clicked="WhenAnswerClicked"
+                    IsEnabled="True"/>
         </Grid>
 
 

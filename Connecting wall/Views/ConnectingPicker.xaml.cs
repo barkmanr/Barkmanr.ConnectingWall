@@ -6,4 +6,29 @@ public partial class ConnectingPicker : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void WhenUpClicked1(object sender, EventArgs e)
+    {
+
+    }
+
+    private void WhenDownClicked1(object sender, EventArgs e)
+    {
+
+    }
+
+    private void WhenUpClicked2(object sender, EventArgs e)
+    {
+
+    }
+
+    private void WhenDownClicked2(object sender, EventArgs e)
+    {
+
+    }
+
+    private void FinishClicked(object sender, EventArgs e)
+    {
+
+    }
 }

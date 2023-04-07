@@ -3,10 +3,93 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Connecting_wall.Views.ConnectingAnwsers"
              Title="ConnectingAnwsers">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <Grid RowDefinitions="3.5*,3*">
+        <Grid Grid.Row="0">
+
+        </Grid>
+
+        <Grid Grid.Row="1" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*,*,*">
+
+            <Label 
+                   x:Name="Team1ScoreLabel" 
+                   Grid.Row="0" Grid.Column="0"            
+                   HorizontalOptions="Center" VerticalOptions="Center" 
+                   FontSize="Medium"
+                   Text="Team 1 Score: 0" />
+            <Label 
+                   x:Name="Team2ScoreLabel" 
+                   Grid.Row="0" Grid.Column="1" 
+                   HorizontalOptions="Center" VerticalOptions="Center" 
+                   FontSize="Medium"
+                   Text="Team 2 Score: 0" />
+
+            <Button
+                    x:Name="a" 
+                    Grid.Row="1" Grid.Column="3"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="a" 
+                    BackgroundColor="LightBlue"
+                    IsEnabled="True"/>
+            <Button
+                    x:Name="b" 
+                    Grid.Row="2" Grid.Column="3"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="b" 
+                    BackgroundColor="LightBlue"
+                    IsEnabled="True"/>
+            <Button
+                    x:Name="Team1UpButton" 
+                    Grid.Row="1" Grid.Column="1"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="+" 
+                    BackgroundColor="PaleGreen"
+                    Clicked="WhenUpClicked1"
+                    IsEnabled="True"/>
+            <Button
+                    x:Name="Team1DownButton" 
+                    Grid.Row="2" Grid.Column="1"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="-" 
+                    BackgroundColor="Pink"
+                    Clicked="WhenDownClicked1"
+                    IsEnabled="True"/>
+            <Button
+                    x:Name="Team2UpButton" 
+                    Grid.Row="1" Grid.Column="0"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="+" 
+                    BackgroundColor="PaleGreen"
+                    Clicked="WhenUpClicked2"
+                    IsEnabled="True"/>
+            <Button
+                    x:Name="Team2DownButton" 
+                    Grid.Row="2" Grid.Column="0"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="-" 
+                    BackgroundColor="Pink"
+                    Clicked="WhenDownClicked2"
+                    IsEnabled="True"/>
+            <Button
+                    x:Name="BackButton" 
+                    Grid.Row="1" Grid.Column="4" Grid.RowSpan="2"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="Back" 
+                    BackgroundColor="PeachPuff"
+                    Clicked="BackClicked"
+                    IsEnabled="True"/>
+        </Grid>
+
+
+
+
+
+    </Grid>
 </ContentPage>

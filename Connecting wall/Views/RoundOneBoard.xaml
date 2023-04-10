@@ -119,7 +119,7 @@
                     IsEnabled="True"/>
             <Button
                     x:Name="Team1UpButton" 
-                    Grid.Row="1" Grid.Column="1"
+                    Grid.Row="1" Grid.Column="0"
                     Margin="5"
                     FontSize="Medium"
                     Text="+" 
@@ -128,7 +128,7 @@
                     IsEnabled="True"/>
             <Button
                     x:Name="Team1DownButton" 
-                    Grid.Row="2" Grid.Column="1"
+                    Grid.Row="2" Grid.Column="0"
                     Margin="5"
                     FontSize="Medium"
                     Text="-" 
@@ -137,7 +137,7 @@
                     IsEnabled="True"/>
             <Button
                     x:Name="Team2UpButton" 
-                    Grid.Row="1" Grid.Column="0"
+                    Grid.Row="1" Grid.Column="1"
                     Margin="5"
                     FontSize="Medium"
                     Text="+" 
@@ -146,7 +146,7 @@
                     IsEnabled="True"/>
             <Button
                     x:Name="Team2DownButton" 
-                    Grid.Row="2" Grid.Column="0"
+                    Grid.Row="2" Grid.Column="1"
                     Margin="5"
                     FontSize="Medium"
                     Text="-" 

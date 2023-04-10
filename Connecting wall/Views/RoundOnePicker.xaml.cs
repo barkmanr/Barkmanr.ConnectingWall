@@ -4,33 +4,41 @@ namespace Connecting_wall.Views;
 
 public partial class RoundOnePicker : ContentPage
 {
+    Team _team1;
+    Team _team2;
 	public RoundOnePicker(Team team1, Team team2)
 	{
 		InitializeComponent();
+        _team1 = team1;
+        _team2 = team2;
+        Team1ScoreLabel.BindingContext = _team1;
+        Team2ScoreLabel.BindingContext = _team2;
 	}
 
     private void WhenUpClicked1(object sender, EventArgs e)
     {
-
+        _team1.TeamScore++;
     }
 
     private void WhenDownClicked1(object sender, EventArgs e)
     {
-
+        if(_team1.TeamScore > 0)
+            _team1.TeamScore--;
     }
 
     private void WhenUpClicked2(object sender, EventArgs e)
     {
-
+        _team2.TeamScore++;
     }
 
     private void WhenDownClicked2(object sender, EventArgs e)
     {
-
+        if (_team2.TeamScore > 0)
+            _team2.TeamScore--;
     }
 
-    private void NextClicked(object sender, EventArgs e)
+    private async void NextClicked(object sender, EventArgs e)
     {
-
+        await Navigation.PushAsync(new ConnectingPicker(_team1,_team2));
     }
 }

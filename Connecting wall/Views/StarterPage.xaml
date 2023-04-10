@@ -4,9 +4,10 @@
              x:Class="Connecting_wall.Views.StarterPage"
              Title="StarterPage">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Label Text="Enter Team 1 Name"/>
+        <Entry x:Name="TeamOneEnt"/>
+        <Label Text="Enter Team 2 Name" />
+        <Entry x:Name="TeamTwoEnt"/>
+        <Button Text="Start Game" Clicked="GoToRoundOne"/>
     </VerticalStackLayout>
 </ContentPage>

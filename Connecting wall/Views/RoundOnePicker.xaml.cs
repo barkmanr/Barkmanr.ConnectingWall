@@ -1,8 +1,10 @@
+using Connecting_wall.Logic;
+
 namespace Connecting_wall.Views;
 
 public partial class RoundOnePicker : ContentPage
 {
-	public RoundOnePicker()
+	public RoundOnePicker(Team team1, Team team2)
 	{
 		InitializeComponent();
 	}

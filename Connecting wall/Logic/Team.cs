@@ -8,25 +8,27 @@ namespace Connecting_wall.Logic
 {
     public class Team
     {
+        private int _teamScore;
+        private string _teamName;
         public int TeamScore
         {
-            get { return TeamScore; }
+            get { return _teamScore; }
             set
             {
                 if (value < 0)
                     throw new Exception("Team score cannot be negative");
-                TeamScore = value;
+                _teamScore = value;
             }
         }
 
         public string TeamName
         {
-            get { return TeamName; }
+            get { return _teamName; }
             set
             {
                 if (value == null)
                     throw new Exception("Team score cannot be blank");
-                TeamName = value;
+                _teamName = value;
             }
         }
 

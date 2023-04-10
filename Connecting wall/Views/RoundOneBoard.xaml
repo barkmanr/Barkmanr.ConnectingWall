@@ -90,14 +90,26 @@
                    x:Name="Team1ScoreLabel" 
                    Grid.Row="0" Grid.Column="0"            
                    HorizontalOptions="Center" VerticalOptions="Center" 
-                   FontSize="Medium"
-                   Text="Team 1 Score: 0" />
+                   FontSize="Medium">
+                <Label.Text>
+                    <MultiBinding StringFormat="{}{0}s Score: {1}">
+                        <Binding Path="TeamName" />
+                        <Binding Path="TeamScore" />
+                    </MultiBinding>
+                </Label.Text>
+            </Label>
             <Label 
                    x:Name="Team2ScoreLabel" 
                    Grid.Row="0" Grid.Column="1" 
                    HorizontalOptions="Center" VerticalOptions="Center" 
-                   FontSize="Medium"
-                   Text="Team 2 Score: 0" />
+                   FontSize="Medium">
+                <Label.Text>
+                    <MultiBinding StringFormat="{}{0}s Score: {1}">
+                        <Binding Path="TeamName" />
+                        <Binding Path="TeamScore" />
+                    </MultiBinding>
+                </Label.Text>
+            </Label>
 
             <Button
                     x:Name="RevealButton" 

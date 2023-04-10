@@ -17,9 +17,9 @@
                    HorizontalOptions="Center" VerticalOptions="Center" 
                    FontSize="Medium">
                 <Label.Text>
-                    <MultiBinding StringFormat="{}{0}s Score: {1}" Mode="TwoWay">
-                        <Binding Path="TeamName" Mode="TwoWay"/>
-                        <Binding Path="TeamScore" Mode="TwoWay" />
+                    <MultiBinding StringFormat="{}{0}s Score: {1}">
+                        <Binding Path="TeamName" />
+                        <Binding Path="TeamScore" />
                     </MultiBinding>
                 </Label.Text>
             </Label>
@@ -30,7 +30,7 @@
                    HorizontalOptions="Center" VerticalOptions="Center" 
                    FontSize="Medium" >
                 <Label.Text>
-                    <MultiBinding StringFormat="{}{0}s Score: {1}" Mode="TwoWay" >
+                    <MultiBinding StringFormat="{}{0}s Score: {1}"  >
                         <Binding Path="TeamName" />
                         <Binding Path="TeamScore"/>
                     </MultiBinding>

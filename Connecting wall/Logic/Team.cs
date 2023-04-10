@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Connecting_wall.Logic
 {
-    public class Team
+    public class Team : INotifyPropertyChanged
     {
         private int _teamScore;
         private string _teamName;
@@ -18,6 +20,7 @@ namespace Connecting_wall.Logic
                 if (value < 0)
                     throw new Exception("Team score cannot be negative");
                 _teamScore = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(TeamScore)));
             }
         }
 
@@ -42,5 +45,6 @@ namespace Connecting_wall.Logic
         {
             return $"{TeamScore}, {TeamScore}";
         }
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

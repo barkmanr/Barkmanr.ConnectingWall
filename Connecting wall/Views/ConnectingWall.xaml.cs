@@ -49,7 +49,56 @@ public partial class ConnectingWall : ContentPage
 
     private void CheckCliked(object sender, EventArgs e)
     {
+        List<string> items = new List<string>();
+        if (CWB1.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB1.Text);
+        if (CWB2.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB2.Text);
+        if (CWB3.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB3.Text);
+        if (CWB4.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB4.Text);
+        if (CWB5.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB5.Text);
+        if (CWB6.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB6.Text);
+        if (CWB7.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB7.Text);
+        if (CWB8.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB8.Text);
+        if (CWB9.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB9.Text);
+        if (CWB10.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB10.Text);
+        if (CWB11.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB11.Text);
+        if (CWB12.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB12.Text);
+        if (CWB13.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB13.Text);
+        if (CWB14.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB14.Text);
+        if (CWB15.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB15.Text);
+        if (CWB16.BackgroundColor == Color.Parse("Lightblue")) items.Add(CWB16.Text);
 
+        if (items.Count == 4)
+        {
+            if (_round == 1)
+            {
+                if (QuestionList.CheckRound3AQuestions(items[0], items[1], items[2], items[3]))
+                {
+                    ChangeButtonsColor("PaleGreen");
+                    LockGreen();
+                }
+                else
+                {
+                    ChangeButtonsColor("PeachPuff");
+                }
+            }
+            else
+            {
+                if (QuestionList.CheckRound3BQuestions(items[0], items[1], items[2], items[3]))
+                {
+                    ChangeButtonsColor("PaleGreen");
+                    LockGreen();
+                }
+                else
+                {
+                    ChangeButtonsColor("PeachPuff");
+                }
+            }
+        }
+        else
+        {
+            ChangeButtonsColor("PeachPuff");
+        }
+        _itemsSelectedNo = 0;
     }
 
     private void NextClicked(object sender, EventArgs e)
@@ -378,5 +427,44 @@ public partial class ConnectingWall : ContentPage
                 CWB16.BackgroundColor = Color.Parse("Lightblue");
             }
         }
+    }
+
+    private void ChangeButtonsColor(string color)
+    {
+        if (CWB1.BackgroundColor == Color.Parse("Lightblue")) CWB1.BackgroundColor = Color.Parse(color);
+        if (CWB2.BackgroundColor == Color.Parse("Lightblue")) CWB2.BackgroundColor = Color.Parse(color);
+        if (CWB3.BackgroundColor == Color.Parse("Lightblue")) CWB3.BackgroundColor = Color.Parse(color);
+        if (CWB4.BackgroundColor == Color.Parse("Lightblue")) CWB4.BackgroundColor = Color.Parse(color);
+        if (CWB5.BackgroundColor == Color.Parse("Lightblue")) CWB5.BackgroundColor = Color.Parse(color);
+        if (CWB6.BackgroundColor == Color.Parse("Lightblue")) CWB6.BackgroundColor = Color.Parse(color);
+        if (CWB7.BackgroundColor == Color.Parse("Lightblue")) CWB7.BackgroundColor = Color.Parse(color);
+        if (CWB8.BackgroundColor == Color.Parse("Lightblue")) CWB8.BackgroundColor = Color.Parse(color);
+        if (CWB9.BackgroundColor == Color.Parse("Lightblue")) CWB9.BackgroundColor = Color.Parse(color);
+        if (CWB10.BackgroundColor == Color.Parse("Lightblue")) CWB10.BackgroundColor = Color.Parse(color);
+        if (CWB11.BackgroundColor == Color.Parse("Lightblue")) CWB11.BackgroundColor = Color.Parse(color);
+        if (CWB12.BackgroundColor == Color.Parse("Lightblue")) CWB12.BackgroundColor = Color.Parse(color);
+        if (CWB13.BackgroundColor == Color.Parse("Lightblue")) CWB13.BackgroundColor = Color.Parse(color);
+        if (CWB14.BackgroundColor == Color.Parse("Lightblue")) CWB14.BackgroundColor = Color.Parse(color);
+        if (CWB15.BackgroundColor == Color.Parse("Lightblue")) CWB15.BackgroundColor = Color.Parse(color);
+        if (CWB16.BackgroundColor == Color.Parse("Lightblue")) CWB16.BackgroundColor = Color.Parse(color);
+    }
+    private void LockGreen()
+    {
+        if (CWB1.BackgroundColor == Color.Parse("paleGreen")) CWB1.IsEnabled= false;
+        if (CWB2.BackgroundColor == Color.Parse("paleGreen")) CWB2.IsEnabled= false;
+        if (CWB3.BackgroundColor == Color.Parse("paleGreen")) CWB3.IsEnabled= false;
+        if (CWB4.BackgroundColor == Color.Parse("paleGreen")) CWB4.IsEnabled= false;
+        if (CWB5.BackgroundColor == Color.Parse("paleGreen")) CWB5.IsEnabled= false;
+        if (CWB6.BackgroundColor == Color.Parse("paleGreen")) CWB6.IsEnabled= false;
+        if (CWB7.BackgroundColor == Color.Parse("paleGreen")) CWB7.IsEnabled= false;
+        if (CWB8.BackgroundColor == Color.Parse("paleGreen")) CWB8.IsEnabled= false;
+        if (CWB9.BackgroundColor == Color.Parse("paleGreen")) CWB9.IsEnabled= false;
+        if (CWB10.BackgroundColor == Color.Parse("paleGreen")) CWB10.IsEnabled= false;
+        if (CWB11.BackgroundColor == Color.Parse("paleGreen")) CWB11.IsEnabled= false;
+        if (CWB12.BackgroundColor == Color.Parse("paleGreen")) CWB12.IsEnabled= false;
+        if (CWB13.BackgroundColor == Color.Parse("paleGreen")) CWB13.IsEnabled= false;
+        if (CWB14.BackgroundColor == Color.Parse("paleGreen")) CWB14.IsEnabled= false;
+        if (CWB15.BackgroundColor == Color.Parse("paleGreen")) CWB15.IsEnabled= false;
+        if (CWB16.BackgroundColor == Color.Parse("paleGreen")) CWB16.IsEnabled= false;
     }
 }

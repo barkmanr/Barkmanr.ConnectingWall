@@ -45,7 +45,7 @@ public partial class ConnectingPicker : ContentPage
     private async void GoToConectingWallOne(object sender, EventArgs e)
     {
         OneBtn.IsEnabled= false;
-        TwoBtn.BackgroundColor = Color.Parse("Grey");
+        OneBtn.BackgroundColor = Color.Parse("Grey");
         await Navigation.PushAsync(new ConnectingWall(_team1, _team2, 1));
     }
 

@@ -13,6 +13,7 @@ public partial class StarterPage : ContentPage
     {
 		Team team1 = new Team(0, TeamOneEnt.Text);
 		Team team2 = new Team(0, TeamTwoEnt.Text);
+		QuestionList.SetUpAllQuestions();
 		await Navigation.PushAsync(new RoundOnePicker(team1,team2));
     }
 }

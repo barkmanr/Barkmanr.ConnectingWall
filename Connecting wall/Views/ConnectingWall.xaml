@@ -9,22 +9,22 @@
         <!--This is the top grid / Make main changes in here -->
         <Grid RowDefinitions="0.5*,*,*,*,*" ColumnDefinitions="*,*,*,*" Grid.Row="0">
             <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Text="Connecting Wall" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold"/>
-            <Button Grid.Row="1" Grid.Column="0" x:Name="CWB1" BackgroundColor="PeachPuff" TextColor ="Black"/>
-            <Button Grid.Row="1" Grid.Column="1" x:Name="CWB2" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="1" Grid.Column="2" x:Name="CWB3" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="1" Grid.Column="3" x:Name="CWB4" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="2" Grid.Column="0" x:Name="CWB5" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="2" Grid.Column="1" x:Name="CWB6" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="2" Grid.Column="2" x:Name="CWB7" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="2" Grid.Column="3" x:Name="CWB8" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="3" Grid.Column="0" x:Name="CWB9" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="3" Grid.Column="1" x:Name="CWB10" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="3" Grid.Column="2" x:Name="CWB11" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="3" Grid.Column="3" x:Name="CWB12" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="4" Grid.Column="0" x:Name="CWB13" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="4" Grid.Column="1" x:Name="CWB14" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="4" Grid.Column="2" x:Name="CWB15" BackgroundColor="PeachPuff" TextColor="Black"/>
-            <Button Grid.Row="4" Grid.Column="3" x:Name="CWB16" BackgroundColor="PeachPuff" TextColor="Black"/>
+            <Button Grid.Row="1" Grid.Column="0" x:Name="CWB1" BackgroundColor="PeachPuff" TextColor ="Black" FontAttributes="Bold" Clicked="OneClicked"/>
+            <Button Grid.Row="1" Grid.Column="1" x:Name="CWB2" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="TwoClicked"/>
+            <Button Grid.Row="1" Grid.Column="2" x:Name="CWB3" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="ThreeClicked"/>
+            <Button Grid.Row="1" Grid.Column="3" x:Name="CWB4" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="FourClicked"/>
+            <Button Grid.Row="2" Grid.Column="0" x:Name="CWB5" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="FiveClicked"/>
+            <Button Grid.Row="2" Grid.Column="1" x:Name="CWB6" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="SixClicked"/>
+            <Button Grid.Row="2" Grid.Column="2" x:Name="CWB7" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="SevenClicked"/>
+            <Button Grid.Row="2" Grid.Column="3" x:Name="CWB8" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="EightClicked"/>
+            <Button Grid.Row="3" Grid.Column="0" x:Name="CWB9" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="NineClicked"/>
+            <Button Grid.Row="3" Grid.Column="1" x:Name="CWB10" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="TenClicked"/>
+            <Button Grid.Row="3" Grid.Column="2" x:Name="CWB11" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="ElevenClicked"/>
+            <Button Grid.Row="3" Grid.Column="3" x:Name="CWB12" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="TwelveClicked"/>
+            <Button Grid.Row="4" Grid.Column="0" x:Name="CWB13" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="ThirteenClicked"/>
+            <Button Grid.Row="4" Grid.Column="1" x:Name="CWB14" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="FourteenClicked"/>
+            <Button Grid.Row="4" Grid.Column="2" x:Name="CWB15" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="FifthteenClicked"/>
+            <Button Grid.Row="4" Grid.Column="3" x:Name="CWB16" BackgroundColor="PeachPuff" TextColor="Black" FontAttributes="Bold" Clicked="SixteenClicked"/>
         </Grid>
 
         <!--This is the bottom grid-->

@@ -8,6 +8,7 @@ public partial class ConnectingWall : ContentPage
     Team _team2;
     int _round;
     Random rnd = new Random();
+    int _itemsSelectedNo;
     public ConnectingWall(Team team1, Team team2, int round)
 	{
 		InitializeComponent();
@@ -105,5 +106,277 @@ public partial class ConnectingWall : ContentPage
         CWB15.Text = $"{format[14]}";
         CWB16.Text = $"{format[15]}";
 
+    }
+
+    private void OneClicked(object sender, EventArgs e)
+    {
+        if (CWB1.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB1.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB1.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void TwoClicked(object sender, EventArgs e)
+    {
+        if (CWB2.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB2.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB2.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void ThreeClicked(object sender, EventArgs e)
+    {
+        if (CWB3.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB3.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB3.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void FourClicked(object sender, EventArgs e)
+    {
+        if (CWB4.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB4.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB4.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void FiveClicked(object sender, EventArgs e)
+    {
+        if (CWB5.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB5.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB5.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void SixClicked(object sender, EventArgs e)
+    {
+        if (CWB6.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB6.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB6.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void SevenClicked(object sender, EventArgs e)
+    {
+        if (CWB7.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB7.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB7.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void EightClicked(object sender, EventArgs e)
+    {
+        if (CWB8.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB8.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB8.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void NineClicked(object sender, EventArgs e)
+    {
+        if (CWB9.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB9.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB9.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void TenClicked(object sender, EventArgs e)
+    {
+        if (CWB10.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB10.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB10.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void ElevenClicked(object sender, EventArgs e)
+    {
+        if (CWB11.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB11.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB11.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void TwelveClicked(object sender, EventArgs e)
+    {
+        if (CWB12.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB12.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB12.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void ThirteenClicked(object sender, EventArgs e)
+    {
+        if (CWB13.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB13.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB13.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void FourteenClicked(object sender, EventArgs e)
+    {
+        if (CWB14.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB14.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB14.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void FifthteenClicked(object sender, EventArgs e)
+    {
+        if (CWB15.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB15.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB15.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
+    }
+
+    private void SixteenClicked(object sender, EventArgs e)
+    {
+        if (CWB16.BackgroundColor == Color.Parse("Lightblue"))
+        {
+            _itemsSelectedNo--;
+            CWB16.BackgroundColor = Color.Parse("PeachPuff");
+        }
+        else
+        {
+            if (_itemsSelectedNo < 4)
+            {
+                _itemsSelectedNo++;
+                CWB16.BackgroundColor = Color.Parse("Lightblue");
+            }
+        }
     }
 }

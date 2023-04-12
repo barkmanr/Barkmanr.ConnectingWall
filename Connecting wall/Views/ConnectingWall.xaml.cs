@@ -110,6 +110,7 @@ public partial class ConnectingWall : ContentPage
         CWB15.IsEnabled = true;
         CWB16.IsEnabled = true;
         timer.Start();
+        TimerButton.IsEnabled = false;
     }
 
     private void CheckCliked(object sender, EventArgs e)

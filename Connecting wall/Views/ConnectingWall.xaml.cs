@@ -1,4 +1,5 @@
 using Connecting_wall.Logic;
+using System.Timers;
 
 namespace Connecting_wall.Views;
 
@@ -9,6 +10,8 @@ public partial class ConnectingWall : ContentPage
     int _round;
     Random rnd = new Random();
     int _itemsSelectedNo;
+    IDispatcherTimer timer;
+    int seconds = 0;
     public ConnectingWall(Team team1, Team team2, int round)
 	{
 		InitializeComponent();
@@ -18,6 +21,17 @@ public partial class ConnectingWall : ContentPage
         Team1ScoreLabel.BindingContext = _team1;
         Team2ScoreLabel.BindingContext = _team2;
         setUpBoard();
+        timer = Application.Current.Dispatcher.CreateTimer();
+        timer.Interval = TimeSpan.FromSeconds(1);
+        timer.Tick += EndTime;
+    }
+
+    private void EndTime(object sender, EventArgs e)
+    {
+        seconds++;
+        TimerLbl.Text = seconds.ToString();
+        if (seconds == 10)
+        timer.Stop();
     }
 
     private void WhenUpClicked1(object sender, EventArgs e)
@@ -44,7 +58,7 @@ public partial class ConnectingWall : ContentPage
 
     private void TimerButtonClicked(object sender, EventArgs e)
     {
-
+        timer.Start();
     }
 
     private void CheckCliked(object sender, EventArgs e)

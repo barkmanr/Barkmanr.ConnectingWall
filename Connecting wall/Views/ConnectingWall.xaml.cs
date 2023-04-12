@@ -11,7 +11,8 @@ public partial class ConnectingWall : ContentPage
     Random rnd = new Random();
     int _itemsSelectedNo;
     IDispatcherTimer timer;
-    int seconds = 0;
+    int seconds = 90;
+    int found = 0;
     public ConnectingWall(Team team1, Team team2, int round)
 	{
 		InitializeComponent();
@@ -24,14 +25,48 @@ public partial class ConnectingWall : ContentPage
         timer = Application.Current.Dispatcher.CreateTimer();
         timer.Interval = TimeSpan.FromSeconds(1);
         timer.Tick += EndTime;
+        CWB1.IsEnabled = false;
+        CWB2.IsEnabled = false;
+        CWB3.IsEnabled = false;
+        CWB4.IsEnabled = false;
+        CWB5.IsEnabled = false;
+        CWB6.IsEnabled = false;
+        CWB7.IsEnabled = false;
+        CWB8.IsEnabled = false;
+        CWB9.IsEnabled = false;
+        CWB10.IsEnabled = false;
+        CWB11.IsEnabled = false;
+        CWB12.IsEnabled = false;
+        CWB13.IsEnabled = false;
+        CWB14.IsEnabled = false;
+        CWB15.IsEnabled = false;
+        CWB16.IsEnabled = false;
     }
 
     private void EndTime(object sender, EventArgs e)
     {
-        seconds++;
-        TimerLbl.Text = seconds.ToString();
-        if (seconds == 10)
-        timer.Stop();
+        seconds--;
+        TimerButton.Text = seconds.ToString();
+        if (seconds == 0)
+        {
+            timer.Stop();
+            CWB1.IsEnabled = false;
+            CWB2.IsEnabled = false;
+            CWB3.IsEnabled = false;
+            CWB4.IsEnabled = false;
+            CWB5.IsEnabled = false;
+            CWB6.IsEnabled = false;
+            CWB7.IsEnabled = false;
+            CWB8.IsEnabled = false;
+            CWB9.IsEnabled = false;
+            CWB10.IsEnabled = false;
+            CWB11.IsEnabled = false;
+            CWB12.IsEnabled = false;
+            CWB13.IsEnabled = false;
+            CWB14.IsEnabled = false;
+            CWB15.IsEnabled = false;
+            CWB16.IsEnabled = false;
+        }
     }
 
     private void WhenUpClicked1(object sender, EventArgs e)
@@ -58,7 +93,24 @@ public partial class ConnectingWall : ContentPage
 
     private void TimerButtonClicked(object sender, EventArgs e)
     {
+        CWB1.IsEnabled = true;
+        CWB2.IsEnabled = true;
+        CWB3.IsEnabled = true;
+        CWB4.IsEnabled = true;
+        CWB5.IsEnabled = true;
+        CWB6.IsEnabled = true;
+        CWB7.IsEnabled = true;
+        CWB8.IsEnabled = true;
+        CWB9.IsEnabled = true;
+        CWB10.IsEnabled = true;
+        CWB11.IsEnabled = true;
+        CWB12.IsEnabled = true;
+        CWB13.IsEnabled = true;
+        CWB14.IsEnabled = true;
+        CWB15.IsEnabled = true;
+        CWB16.IsEnabled = true;
         timer.Start();
+        TimerButton.IsEnabled = false;
     }
 
     private void CheckCliked(object sender, EventArgs e)
@@ -89,6 +141,7 @@ public partial class ConnectingWall : ContentPage
                 {
                     ChangeButtonsColor("PaleGreen");
                     LockGreen();
+                    found++;
                 }
                 else
                 {
@@ -101,6 +154,7 @@ public partial class ConnectingWall : ContentPage
                 {
                     ChangeButtonsColor("PaleGreen");
                     LockGreen();
+                    found++;
                 }
                 else
                 {
@@ -113,6 +167,10 @@ public partial class ConnectingWall : ContentPage
             ChangeButtonsColor("PeachPuff");
         }
         _itemsSelectedNo = 0;
+        if(found == 4)
+        {
+            timer.Stop();
+        }
     }
 
     private void NextClicked(object sender, EventArgs e)

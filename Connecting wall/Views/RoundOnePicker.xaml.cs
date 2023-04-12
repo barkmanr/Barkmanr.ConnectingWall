@@ -41,4 +41,9 @@ public partial class RoundOnePicker : ContentPage
     {
         await Navigation.PushAsync(new ConnectingPicker(_team1,_team2));
     }
+
+    private async void GoToBtnOne(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 1));
+    }
 }

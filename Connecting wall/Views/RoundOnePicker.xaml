@@ -36,7 +36,16 @@
                     </MultiBinding>
                 </Label.Text>
             </Label>
-
+            
+            <Button
+                    x:Name="Symbol1" 
+                    Grid.Row="1" Grid.Column="3"
+                    Margin="5"
+                    FontSize="Medium"
+                    Text="a" 
+                    BackgroundColor="Violet"
+                    IsEnabled="True"/>
+            
             <Button
                     x:Name="a" 
                     Grid.Row="1" Grid.Column="3"

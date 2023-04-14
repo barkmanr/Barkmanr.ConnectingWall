@@ -76,6 +76,41 @@ public partial class ConnectingAnwsers : ContentPage
 
     private void CheckedOne(object sender, EventArgs e)
     {
+        Item1.Text = _questions[0].Description[0];
+        Item2.Text = _questions[0].Description[1];
+        Item3.Text = _questions[0].Description[2];
+        Item4.Text = _questions[0].Description[3];
+        Check1.Text = _questions[0].Connection;
+        Check1.IsEnabled = false;
+    }
 
+    private void CheckedTwo(object sender, EventArgs e)
+    {
+        Item5.Text = _questions[1].Description[0];
+        Item6.Text = _questions[1].Description[1];
+        Item7.Text = _questions[1].Description[2];
+        Item8.Text = _questions[1].Description[3];
+        Check2.Text = _questions[1].Connection;
+        Check2.IsEnabled = false;
+    }
+
+    private void CheckedThree(object sender, EventArgs e)
+    {
+        Item9.Text = _questions[2].Description[0];
+        Item10.Text = _questions[2].Description[1];
+        Item11.Text = _questions[2].Description[2];
+        Item12.Text = _questions[2].Description[3];
+        Check3.Text = _questions[2].Connection;
+        Check3.IsEnabled = false;
+    }
+
+    private void CheckedFour(object sender, EventArgs e)
+    {
+        Item13.Text = _questions[3].Description[0];
+        Item14.Text = _questions[3].Description[1];
+        Item15.Text = _questions[3].Description[2];
+        Item16.Text = _questions[3].Description[3];
+        Check4.Text = _questions[3].Connection;
+        Check4.IsEnabled = false;
     }
 }

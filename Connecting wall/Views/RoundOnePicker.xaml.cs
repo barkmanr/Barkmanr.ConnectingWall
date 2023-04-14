@@ -46,4 +46,29 @@ public partial class RoundOnePicker : ContentPage
     {
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 1));
     }
+
+    private async void GoToBtnTwo(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 2));
+    }
+
+    private async void GoToBtnThree(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 3));
+    }
+
+    private async void GoToBtnFour(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 4));
+    }
+
+    private async void GoToBtnFive(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 5));
+    }
+
+    private async void GoToBtnSix(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 6));
+    }
 }

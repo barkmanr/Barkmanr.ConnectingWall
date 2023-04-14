@@ -21,7 +21,7 @@
                     Text="!" 
                     BackgroundColor="Violet"
                     IsEnabled="True"
-                Clicked="GoToBtnOne"/>
+                    Clicked="GoToBtnOne"/>
             <Button
                     x:Name="Symbol2" 
                     Grid.Row="0" Grid.Column="1"
@@ -29,7 +29,8 @@
                     FontSize="Medium"
                     Text="@" 
                     BackgroundColor="Violet"
-                    IsEnabled="True"/>
+                    IsEnabled="True"
+                    Clicked="GoToBtnTwo"/>
             <Button
                     x:Name="Symbol3" 
                     Grid.Row="0" Grid.Column="2"
@@ -37,7 +38,8 @@
                     FontSize="Medium"
                     Text="#" 
                     BackgroundColor="Violet"
-                    IsEnabled="True"/>
+                    IsEnabled="True"
+                    Clicked="GoToBtnThree"/>
             <Button
                     x:Name="Symbol4" 
                     Grid.Row="1" Grid.Column="0"
@@ -45,7 +47,8 @@
                     FontSize="Medium"
                     Text="$" 
                     BackgroundColor="Violet"
-                    IsEnabled="True"/>
+                    IsEnabled="True"
+                    Clicked="GoToBtnFour"/>
             <Button
                     x:Name="Symbol5" 
                     Grid.Row="1" Grid.Column="1"
@@ -53,7 +56,8 @@
                     FontSize="Medium"
                     Text="%" 
                     BackgroundColor="Violet"
-                    IsEnabled="True"/>
+                    IsEnabled="True"
+                    Clicked="GoToBtnFive"/>
             <Button
                     x:Name="Symbol6" 
                     Grid.Row="1" Grid.Column="2"
@@ -61,7 +65,8 @@
                     FontSize="Medium"
                     Text="^" 
                     BackgroundColor="Violet"
-                    IsEnabled="True"/>
+                    IsEnabled="True"
+                    Clicked="GoToBtnSix"/>
         </Grid>
 
         <Grid Grid.Row="2" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*,*,*">

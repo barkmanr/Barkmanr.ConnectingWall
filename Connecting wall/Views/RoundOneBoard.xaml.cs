@@ -63,21 +63,36 @@ public partial class RoundOneBoard : ContentPage
             if (Item == 1)
             {
                 player1.Play();
+                string itemImageSource = null;
+                Item1.Source = ImageSource.FromFile(itemImageSource);
+                Item1Label.Text = "Playing Audio...";
             }
             if (Item == 2)
             {
+                Item1Label.Text = "Audio Stopped...";
                 player1.Stop();
                 player2.Play();
+                string itemImageSource = null;
+                Item2.Source = ImageSource.FromFile(itemImageSource);
+                Item2Label.Text = "Playing Audio...";
             }
             if (Item == 3)
             {
+                Item2Label.Text = "Audio Stopped...";
                 player2.Stop();
                 player3.Play();
+                string itemImageSource = null;
+                Item3.Source = ImageSource.FromFile(itemImageSource);
+                Item3Label.Text = "Playing Audio...";
             }
             if (Item == 4)
             {
+                Item3Label.Text = "Audio Stopped...";
                 player3.Stop();
                 player4.Play();
+                string itemImageSource = null;
+                Item4.Source = ImageSource.FromFile(itemImageSource);
+                Item4Label.Text = "Playing Audio...";
             }
 
         }
@@ -120,6 +135,7 @@ public partial class RoundOneBoard : ContentPage
             player2.Stop();
             player3.Stop();
             player4.Stop();
+            Item4Label.Text = "Audio Stopped...";
         }
         string answerMessage = "Connection: " + QuestionList.GetRound1Question(_round).Connection;
         Answer.Text = answerMessage;

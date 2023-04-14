@@ -173,9 +173,9 @@ public partial class ConnectingWall : ContentPage
         }
     }
 
-    private void NextClicked(object sender, EventArgs e)
+    private async void NextClicked(object sender, EventArgs e)
     {
-
+        await Navigation.PushAsync(new ConnectingAnwsers(_team1,_team2,_round));
     }
 
     private void setUpBoard()

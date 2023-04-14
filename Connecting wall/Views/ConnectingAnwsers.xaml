@@ -5,8 +5,28 @@
              Title="ConnectingAnwsers">
 
     <Grid RowDefinitions="3.5*,3*">
-        <Grid Grid.Row="0">
-
+        <Grid RowDefinitions="0.5*,*,*,*,*" ColumnDefinitions="*,*,*,*,*" Grid.Row="0">
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Text="Connecting Wall Anwsers" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold"/>
+            <Button x:Name="Item1" Grid.Row="1" Grid.Column="0" BackgroundColor="PaleGreen" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Item2" Grid.Row="1" Grid.Column="1" BackgroundColor="PaleGreen" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Item3" Grid.Row="1" Grid.Column="2" BackgroundColor="PaleGreen" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Item4" Grid.Row="1" Grid.Column="3" BackgroundColor="PaleGreen" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Check1" Grid.Row ="1" Grid.Column="4" BackgroundColor="LightBlue" Text="Reveal"/>
+            <Button x:Name="Item5" Grid.Row="2" Grid.Column="0" BackgroundColor="PeachPuff" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Item6" Grid.Row="2" Grid.Column="1" BackgroundColor="PeachPuff" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Item7" Grid.Row="2" Grid.Column="2" BackgroundColor="PeachPuff" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Item8" Grid.Row="2" Grid.Column="3" BackgroundColor="PeachPuff" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Check2" Grid.Row ="2" Grid.Column="4" BackgroundColor="LightBlue" Text="Reveal"/>
+            <Button x:Name="Item9" Grid.Row="3" Grid.Column="0" BackgroundColor="IndianRed" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Item10" Grid.Row="3" Grid.Column="1" BackgroundColor="IndianRed" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Item11" Grid.Row="3" Grid.Column="2" BackgroundColor="IndianRed" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Item12" Grid.Row="3" Grid.Column="3" BackgroundColor="IndianRed" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Check3" Grid.Row ="3" Grid.Column="4" BackgroundColor="LightBlue" Text="Reveal"/>
+            <Button x:Name="Item13" Grid.Row="4" Grid.Column="0" BackgroundColor="Plum" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Item14" Grid.Row="4" Grid.Column="1" BackgroundColor="Plum" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Item15" Grid.Row="4" Grid.Column="2" BackgroundColor="Plum" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Item16" Grid.Row="4" Grid.Column="3" BackgroundColor="Plum" IsEnabled="False" BorderColor="Black"/>
+            <Button x:Name="Check4" Grid.Row ="4" Grid.Column="4" BackgroundColor="LightBlue" Text="Reveal"/>
         </Grid>
 
         <Grid Grid.Row="1" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*,*,*">

@@ -65,7 +65,7 @@ public partial class RoundOneBoard : ContentPage
             }
             if (Item == 2)
             {
-                player1.Pause();
+                player1.Stop();
                 player2.Play();
             }
             if (Item == 3)

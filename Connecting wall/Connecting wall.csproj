@@ -49,6 +49,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\balloon.svg" />
+	  <None Remove="Resources\Images\magnitude.png" />
+	  <None Remove="Resources\Images\paper.png" />
+	  <None Remove="Resources\Images\rock.png" />
+	  <None Remove="Resources\Images\scissors.png" />
+	  <None Remove="Resources\Images\shoot.png" />
+	  <None Remove="Resources\Images\soda.svg" />
+	  <None Remove="Resources\Images\world.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 

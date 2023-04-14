@@ -30,7 +30,7 @@ namespace Connecting_wall.Logic
             set
             {
                 if (value == null)
-                    throw new Exception("Team score cannot be blank");
+                    throw new Exception("Team name cannot be blank");
                 _teamName = value;
             }
         }

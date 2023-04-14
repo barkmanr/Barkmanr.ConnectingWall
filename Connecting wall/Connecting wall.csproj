@@ -51,6 +51,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\balloon.svg" />
 	  <None Remove="Resources\Images\magnitude.png" />
+	  <None Remove="Resources\Images\OnlyConnect.png" />
 	  <None Remove="Resources\Images\paper.png" />
 	  <None Remove="Resources\Images\rock.png" />
 	  <None Remove="Resources\Images\scissors.png" />

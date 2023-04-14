@@ -3,11 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Connecting_wall.Views.StarterPage"
              Title="StarterPage">
-    <VerticalStackLayout>
-        <Label Text="Enter Team 1 Name"/>
-        <Entry x:Name="TeamOneEnt"/>
-        <Label Text="Enter Team 2 Name" />
-        <Entry x:Name="TeamTwoEnt"/>
-        <Button Text="Start Game" Clicked="GoToRoundOne"/>
-    </VerticalStackLayout>
-</ContentPage>
+    <Grid RowDefinitions="2*,2*,*,*,*,*,*,2*,*" ColumnDefinitions="*,4*,*" BackgroundColor="Gold">
+        <Label Text="Only Connect" FontSize="Title" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" FontAttributes="Italic,Bold"/>
+        <Image Grid.Row="1" Source="onlyconnect.png" Grid.Column="1"/>
+        <Label Text="Enter Team 1 Name" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" FontAttributes="Bold" Grid.Column="1"/>
+        <Entry x:Name="TeamOneEnt" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Row="3" BackgroundColor="White" Grid.Column="1"/>
+        <Label Text="Enter Team 2 Name"  HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="4" FontAttributes="Bold" Grid.Column="1"/>
+        <Entry x:Name="TeamTwoEnt" Grid.Row="5" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="White" Grid.Column="1"/>
+        <Button Text="Start Game" Clicked="GoToRoundOne" Grid.Row="7" BackgroundColor="PaleGreen" TextColor="Black" FontSize="Subtitle" Grid.Column="1"/>
+    </Grid>
+</ContentPage> 

@@ -1,4 +1,5 @@
 using Connecting_wall.Logic;
+using Plugin.Maui.Audio;
 
 namespace Connecting_wall.Views;
 
@@ -6,9 +7,15 @@ public partial class RoundOneBoard : ContentPage
 {
     Team _team1;
     Team _team2;
+    IAudioManager _audioManager;
     int _round;
     private int Item = 1;
-    public RoundOneBoard(Team team1, Team team2, int round)
+    private IAudioPlayer player1;
+    private IAudioPlayer player2;
+    private IAudioPlayer player3;
+    private IAudioPlayer player4;
+
+    public RoundOneBoard(Team team1, Team team2, int round, IAudioManager audioManager)
 	{
 		InitializeComponent();
         _team1 = team1;
@@ -16,6 +23,16 @@ public partial class RoundOneBoard : ContentPage
         _round = round;
         Team1ScoreLabel.BindingContext = _team1;
         Team2ScoreLabel.BindingContext = _team2;
+        _audioManager = audioManager;
+        setupaudio();
+    }
+
+    public async void setupaudio()
+    {
+        player1 = _audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(QuestionList.GetRound1Question(_round).Item[0] + ".mp3"));
+        player2 = _audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(QuestionList.GetRound1Question(_round).Item[1] + ".mp3"));
+        player3 = _audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(QuestionList.GetRound1Question(_round).Item[2] + ".mp3"));
+        player4 = _audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(QuestionList.GetRound1Question(_round).Item[3] + ".mp3"));
     }
 
     private void WhenRevealedClicked(object sender, EventArgs e)
@@ -39,6 +56,29 @@ public partial class RoundOneBoard : ContentPage
                 Item4.Source = QuestionList.GetRound1Question(_round).Item[3] + ".png";
                 RevealButton.IsEnabled = false;
             }
+        }
+        else if (QuestionList.GetRound1Question(_round).Type == QuestionType.Audio)
+        {
+            if (Item == 1)
+            {
+                player1.Play();
+            }
+            if (Item == 2)
+            {
+                player1.Stop();
+                player2.Play();
+            }
+            if (Item == 3)
+            {
+                player2.Stop();
+                player3.Play();
+            }
+            if (Item == 4)
+            {
+                player3.Stop();
+                player4.Play();
+            }
+
         }
         else
         {

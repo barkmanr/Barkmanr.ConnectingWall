@@ -61,6 +61,10 @@
 	  <None Remove="Resources\Images\trash.png" />
 	  <None Remove="Resources\Images\trophy.png" />
 	  <None Remove="Resources\Images\world.png" />
+	  <None Remove="Resources\Raw\gospeltruth.mp3" />
+	  <None Remove="Resources\Raw\greasedlightning.mp3" />
+	  <None Remove="Resources\Raw\thunder.mp3" />
+	  <None Remove="Resources\Raw\thunderstruck.mp3" />
 	</ItemGroup>
 
 	<ItemGroup>

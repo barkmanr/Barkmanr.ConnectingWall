@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using Plugin.Maui.Audio;
+using Connecting_wall.Views;
 
 namespace Connecting_wall;
 
@@ -14,6 +16,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
+		builder.Services.AddSingleton(AudioManager.Current);
+		builder.Services.AddTransient<StarterPage>();
 
 #if DEBUG
 		builder.Logging.AddDebug();

@@ -107,7 +107,7 @@ namespace Connecting_wall.Logic
 
             _round3A.Add(new Question(new List<string> { "Quebec", "November", "Tango", "Foxtrot" }, new List<string>
             { "Q", "N","T","F" },
-                "NATO / Phonetic / Army / Radio communications Alphabet", QuestionType.Normal));
+                "NATO / Phonetic Alphabet", QuestionType.Normal));
 
             _round3A.Add(new Question(new List<string> { "Feather", "Marker", "Brush", "Pencil" }, new List<string>
             { "People wrote with feather and ink.", "Markers are used to write for labels.",
@@ -131,7 +131,7 @@ namespace Connecting_wall.Logic
                 "No vowels", QuestionType.Normal));
 
             _round3B.Add(new Question(new List<string> { "Torgue", "Blue Shell", "Creeper", "Red Barrels" }, new List<string>
-            { "Weapons manufacturer in Borderlands. All their weapons shot explosions.", "Mario kart- will blow up the player in first place",
+            { "Weapons manufacturer in Borderlands. All their weapons shoot explosions.", "Mario kart- will blow up the player in first place",
                 "Minecraft enemy that blows itself up as a form of attack","Most typical type of shootable explosion in video games." },
                 "Things that go boom in video games", QuestionType.Normal));
         }

@@ -41,9 +41,10 @@ public partial class ConnectingAnwsers : ContentPage
             _team2.TeamScore--;
     }
 
-    private void BackClicked(object sender, EventArgs e)
+    private async void BackClicked(object sender, EventArgs e)
     {
-
+        Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
+        await Navigation.PopAsync();
     }
 
     private void setUpBoard()

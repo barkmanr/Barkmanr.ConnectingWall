@@ -20,37 +20,60 @@ public partial class RoundOneBoard : ContentPage
 
     private void WhenRevealedClicked(object sender, EventArgs e)
     {
-        if (Item == 1)
+        if (QuestionList.GetRound1Question(_round).Type == QuestionType.Image)
         {
-            string itemImageSource = null;
-            Item1.Source = ImageSource.FromFile(itemImageSource);
-            Item1Label.Text = QuestionList.GetRound1Question(_round).Item[0];
+            if (Item == 1)
+            {
+                Item1.Source = QuestionList.GetRound1Question(_round).Item[0] + ".png";
+            }
+            if (Item == 2)
+            {
+                Item2.Source = QuestionList.GetRound1Question(_round).Item[1] + ".png";
+            }
+            if (Item == 3)
+            {
+                Item3.Source = QuestionList.GetRound1Question(_round).Item[2] + ".png";
+            }
+            if (Item == 4)
+            {
+                Item4.Source = QuestionList.GetRound1Question(_round).Item[3] + ".png";
+                RevealButton.IsEnabled = false;
+            }
         }
-        if (Item == 2)
+        else
         {
-            string itemImageSource = null;
-            Item2.Source = ImageSource.FromFile(itemImageSource);
-            Item2Label.Text = QuestionList.GetRound1Question(_round).Item[1];
+            if (Item == 1)
+            {
+                string itemImageSource = null;
+                Item1.Source = ImageSource.FromFile(itemImageSource);
+                Item1Label.Text = QuestionList.GetRound1Question(_round).Item[0];
+            }
+            if (Item == 2)
+            {
+                string itemImageSource = null;
+                Item2.Source = ImageSource.FromFile(itemImageSource);
+                Item2Label.Text = QuestionList.GetRound1Question(_round).Item[1];
+            }
+            if (Item == 3)
+            {
+                string itemImageSource = null;
+                Item3.Source = ImageSource.FromFile(itemImageSource);
+                Item3Label.Text = QuestionList.GetRound1Question(_round).Item[2];
+            }
+            if (Item == 4)
+            {
+                string itemImageSource = null;
+                Item4.Source = ImageSource.FromFile(itemImageSource);
+                RevealButton.IsEnabled = false;
+                Item4Label.Text = QuestionList.GetRound1Question(_round).Item[3];
+            }
         }
-        if (Item == 3)
-        {
-            string itemImageSource = null;
-            Item3.Source = ImageSource.FromFile(itemImageSource);
-            Item3Label.Text = QuestionList.GetRound1Question(_round).Item[2];
-        }
-        if (Item == 4)
-        {
-            string itemImageSource = null;
-            Item4.Source = ImageSource.FromFile(itemImageSource);
-            RevealButton.IsEnabled = false;
-            Item4Label.Text = QuestionList.GetRound1Question(_round).Item[3];
-        }
-        Item += 1;
+            Item += 1;
     }
 
     private void WhenAnswerClicked(object sender, EventArgs e)
     {
-        string answerMessage = QuestionList.GetRound1Question(_round).Connection;
+        string answerMessage = "Connection: " + QuestionList.GetRound1Question(_round).Connection;
         Answer.Text = answerMessage;
         AnswerButton.IsEnabled = false;
         string itemImageSource = null;
@@ -58,10 +81,10 @@ public partial class RoundOneBoard : ContentPage
         Item2.Source = ImageSource.FromFile(itemImageSource);
         Item3.Source = ImageSource.FromFile(itemImageSource);
         Item4.Source = ImageSource.FromFile(itemImageSource);
-        Item1Label.Text = QuestionList.GetRound1Question(_round).Item[0] +  "\n\nDescription:\n" + QuestionList.GetRound1Question(_round).Description[0];
-        Item2Label.Text = QuestionList.GetRound1Question(_round).Item[1] + "\n\nDescription:\n" + QuestionList.GetRound1Question(_round).Description[1];
-        Item3Label.Text = QuestionList.GetRound1Question(_round).Item[2] + "\n\nDescription:\n" + QuestionList.GetRound1Question(_round).Description[2];
-        Item4Label.Text = QuestionList.GetRound1Question(_round).Item[3] + "\n\nDescription:\n" + QuestionList.GetRound1Question(_round).Description[3];
+        Item1Label.Text = QuestionList.GetRound1Question(_round).Item[0] +  "\nDescription:\n" + QuestionList.GetRound1Question(_round).Description[0];
+        Item2Label.Text = QuestionList.GetRound1Question(_round).Item[1] + "\nDescription:\n" + QuestionList.GetRound1Question(_round).Description[1];
+        Item3Label.Text = QuestionList.GetRound1Question(_round).Item[2] + "\nDescription:\n" + QuestionList.GetRound1Question(_round).Description[2];
+        Item4Label.Text = QuestionList.GetRound1Question(_round).Item[3] + "\nDescription:\n" + QuestionList.GetRound1Question(_round).Description[3];
         Frame1.IsVisible = true;
         Frame2.IsVisible = true; 
         Frame3.IsVisible = true; 

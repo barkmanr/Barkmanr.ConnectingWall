@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Connecting_wall.Views.RoundOnePicker"
-             Title="RoundOnePicker">
-
+             x:Class="Connecting_wall.Views.RoundTwoPicker"
+             Title="RoundTwoPicker">
+    
     <Grid RowDefinitions=".7*,3.5*,3*">
         <Grid Grid.Row="0">
             <Label
                 FontSize="Medium">
                 Pick a symbol...
             </Label>
-               
+
         </Grid>
         <Grid Grid.Row="1" RowDefinitions="*,*" ColumnDefinitions="*,*,*">
             <Button
@@ -19,7 +19,7 @@
                     Margin="5"
                     FontSize="Medium"
                     Text="!" 
-                    BackgroundColor="Violet"
+                    BackgroundColor="IndianRed"
                     IsEnabled="True"
                     Clicked="GoToBtnOne"/>
             <Button
@@ -28,7 +28,7 @@
                     Margin="5"
                     FontSize="Medium"
                     Text="@" 
-                    BackgroundColor="Violet"
+                    BackgroundColor="IndianRed"
                     IsEnabled="True"
                     Clicked="GoToBtnTwo"/>
             <Button
@@ -37,7 +37,7 @@
                     Margin="5"
                     FontSize="Medium"
                     Text="#" 
-                    BackgroundColor="Violet"
+                    BackgroundColor="IndianRed"
                     IsEnabled="True"
                     Clicked="GoToBtnThree"/>
             <Button
@@ -46,7 +46,7 @@
                     Margin="5"
                     FontSize="Medium"
                     Text="$" 
-                    BackgroundColor="Violet"
+                    BackgroundColor="IndianRed"
                     IsEnabled="True"
                     Clicked="GoToBtnFour"/>
             <Button
@@ -55,7 +55,7 @@
                     Margin="5"
                     FontSize="Medium"
                     Text="%" 
-                    BackgroundColor="Violet"
+                    BackgroundColor="IndianRed"
                     IsEnabled="True"
                     Clicked="GoToBtnFive"/>
             <Button
@@ -64,7 +64,7 @@
                     Margin="5"
                     FontSize="Medium"
                     Text="^" 
-                    BackgroundColor="Violet"
+                    BackgroundColor="IndianRed"
                     IsEnabled="True"
                     Clicked="GoToBtnSix"/>
         </Grid>
@@ -111,7 +111,7 @@
                     FontSize="Medium"
                     BackgroundColor="LightBlue"
                     IsEnabled="True"/>
-            
+
             <Button
                     x:Name="Team1UpButton" 
                     Grid.Row="1" Grid.Column="0"
@@ -158,10 +158,6 @@
                     Clicked="NextClicked"
                     IsEnabled="True"/>
         </Grid>
-        
-        
-        
-        
-   
+
     </Grid>
 </ContentPage>

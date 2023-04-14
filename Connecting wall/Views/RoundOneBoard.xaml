@@ -28,7 +28,7 @@
                  HorizontalOptions="Center"
                  Margin="5"
                  MaxLines="5"
-                 FontSize="Medium"/>
+                 FontSize="Small"/>
             
 
             <Image
@@ -46,7 +46,7 @@
                    HorizontalOptions="Center"
                    Margin="5"
                    MaxLines="5"
-                   FontSize="Medium"/>
+                   FontSize="Small"/>
             
             <Image
                    x:Name="Item3" 
@@ -63,7 +63,7 @@
                    HorizontalOptions="Center"
                    Margin="5"
                    MaxLines="5"
-                   FontSize="Medium"/>
+                   FontSize="Small"/>
             <Image
                    x:Name="Item4" 
                    Grid.Row="2" Grid.Column="3" 
@@ -79,7 +79,8 @@
                    HorizontalOptions="Center"
                    Margin="5"
                    MaxLines="5"
-                   FontSize="Medium"/>
+                   FontSize="Small"/>
+            
             <Label
                    x:Name="Point1Label" 
                    Grid.Row="1" Grid.Column="3"
@@ -116,7 +117,7 @@
                    HorizontalOptions="Center" VerticalOptions="Center" 
                    Margin="5"
                    FontSize="Medium"
-                   Text="Answer: "/>
+                   Text="Connection: "/>
 
         </Grid>
         <Grid Grid.Row="1" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*,*,*">

@@ -95,6 +95,9 @@
 	  <MauiXaml Update="Views\RoundOnePicker.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\RoundTwoPicker.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\StarterPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

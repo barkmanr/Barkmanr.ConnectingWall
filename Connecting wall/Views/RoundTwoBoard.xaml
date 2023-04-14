@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Connecting_wall.Views.Round2Board"
+             x:Class="Connecting_wall.Views.RoundTwoBoard"
              Title="RoundTwoBoard">
     <Grid RowDefinitions="3.5*,3*">
         <Grid Grid.Row="0" RowDefinitions="0.5*,*,2*,*" ColumnDefinitions="*,*,*,*">
             <Label 
                 Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
-                Text="Round 1" 
+                Text="Round 2" 
                 HorizontalOptions="Center"
                 FontSize="Title" 
                 FontAttributes="Bold"/>
@@ -21,6 +21,15 @@
                    Aspect="AspectFit"
                    Source="question_mark.png"/>
 
+            <Frame x:Name="Frame1" Grid.Row="2" Grid.Column="0" BorderColor="Black" BackgroundColor="LightCoral" IsVisible="false"/>
+            <Label
+                x:Name="Item1Label"
+                 Grid.Row="2" Grid.Column="0" 
+                 HorizontalOptions="Center"
+                 Margin="5"
+                 MaxLines="5"
+                 FontSize="Small"/>
+
             <Image
                    x:Name="Item2" 
                    Grid.Row="2" Grid.Column="1" 
@@ -29,6 +38,15 @@
                    Aspect="AspectFit"
                    Source="question_mark.png"/>
 
+            <Frame x:Name="Frame2" Grid.Row="2" Grid.Column="1" BorderColor="Black" BackgroundColor="LightCoral" IsVisible="false"/>
+            <Label
+                x:Name="Item2Label" 
+                   Grid.Row="2" Grid.Column="1" 
+                   HorizontalOptions="Center"
+                   Margin="5"
+                   MaxLines="5"
+                   FontSize="Small"/>
+            
             <Image
                    x:Name="Item3" 
                    Grid.Row="2" Grid.Column="2" 
@@ -37,6 +55,15 @@
                    Aspect="AspectFit"
                    Source="question_mark.png"/>
 
+            <Frame x:Name="Frame3" Grid.Row="2" Grid.Column="2" BorderColor="Black" BackgroundColor="LightCoral" IsVisible="false"/>
+            <Label
+                x:Name="Item3Label" 
+                   Grid.Row="2" Grid.Column="2" 
+                   HorizontalOptions="Center"
+                   Margin="5"
+                   MaxLines="5"
+                   FontSize="Small"/>
+
             <Image
                    x:Name="Item4" 
                    Grid.Row="2" Grid.Column="3" 
@@ -44,13 +71,25 @@
                    Margin="5"
                    Aspect="AspectFit"
                    Source="question_mark.png"/>
+
+            <Frame x:Name="Frame4" Grid.Row="2" Grid.Column="3" BorderColor="Black" BackgroundColor="LightCoral" IsVisible="false"/>
             <Label
-                   x:Name="Point1Label" 
+                x:Name="Item4Label" 
+                   Grid.Row="2" Grid.Column="3" 
+                   HorizontalOptions="Center"
+                   Margin="5"
+                   MaxLines="5"
+                   FontSize="Small"/>
+            
+            <Label
+                   x:Name="AnswerLabel" 
                    Grid.Row="1" Grid.Column="3"
                    HorizontalOptions="Center" VerticalOptions="Center" 
                    Margin="5"
                    FontSize="Medium"
-                   Text="1 Point"/>
+                   Text="Answer"
+                   FontAttributes="Bold, Italic"/>
+            
             <Label
                    x:Name="Point2Label" 
                    Grid.Row="1" Grid.Column="2"
@@ -80,7 +119,7 @@
                    HorizontalOptions="Center" VerticalOptions="Center" 
                    Margin="5"
                    FontSize="Medium"
-                   Text="Answer: "/>
+                   Text="Connection: "/>
 
         </Grid>
         <Grid Grid.Row="1" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*,*,*">

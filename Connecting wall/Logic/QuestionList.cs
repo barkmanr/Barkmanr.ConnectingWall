@@ -42,8 +42,8 @@ namespace Connecting_wall.Logic
                 "Target on the video game “Hitman” on the level “club 27”. Killed on his 27th birthday","Started the idea of 27 club. Killed himself. (1967 - 1994)" },
                 "27 club. Died at the age of 27.", QuestionType.Normal));
 
-            _round1.Add(new Question(new List<string> { "Perfect bowling game", "Partridge", "Chinese zodiac signs", "eggs" }, new List<string>
-            { "12 strikes", "Partridge in a pear tree - 12 days of Christmas","12 Chinese zodiac signs","a dozen eggs" },
+            _round1.Add(new Question(new List<string> { "Perfect bowling game", "Partridge", "Chinese zodiac signs", "Eggs" }, new List<string>
+            { "12 strikes", "Partridge in a pear tree - 12 days of Christmas","12 Chinese zodiac signs","A dozen eggs" },
                 "12", QuestionType.Normal));
 
             _round1.Add(new Question(new List<string> { "Miscommunication", "Tragedy", "Resurrection", "The Chosen One" }, new List<string>
@@ -101,7 +101,7 @@ namespace Connecting_wall.Logic
             { "Richard Hatch - Season 1", "Jud “Fabio” Birza - Season 21","John Cochran - Season 26","Rob Marino - Season 22" },
                 "Survivor Winners", QuestionType.Normal));
 
-            _round3A.Add(new Question(new List<string> { "Wooden fence", "Barbed Wire", "Soccer Cleats", "Cactus " }, new List<string>
+            _round3A.Add(new Question(new List<string> { "Wooden Fence", "Barbed Wire", "Soccer Cleats", "Cactus " }, new List<string>
             { "Top of fence", "Covered in spikes","Spikes on the bottom","Covered in spikes" },
                 "Things with spikes", QuestionType.Normal));
 
@@ -138,15 +138,15 @@ namespace Connecting_wall.Logic
 
         public static Question GetRound1Question(int x)
         {
-            if (x > 5 || x < 0)
+            if (x > 6 || x < 1)
                 throw new Exception("Must be in range 0-5");
-            return _round1[x];
+            return _round1[x - 1];
         }
         public static Question GetRound2Question(int x)
         {
-            if (x > 5 || x < 0)
+            if (x > 6 || x < 1)
                 throw new Exception("Must be in range 0-5");
-            return _round2[x];
+            return _round2[x - 1];
         }
 
         public static bool CheckRound3AQuestions(string a,string b,string c,string d)

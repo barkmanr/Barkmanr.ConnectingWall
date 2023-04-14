@@ -5,8 +5,46 @@
              Title="ConnectingAnwsers">
 
     <Grid RowDefinitions="3.5*,3*">
-        <Grid Grid.Row="0">
+        <Grid RowDefinitions="0.5*,*,*,*,*" ColumnDefinitions="*,*,*,*,*" Grid.Row="0" >
 
+            <Frame Grid.Row="1" Grid.Column="0" BorderColor="Black" BackgroundColor="PaleGreen"/>
+            <Frame Grid.Row="1" Grid.Column="1" BorderColor="Black" BackgroundColor="PaleGreen"/>
+            <Frame Grid.Row="1" Grid.Column="2" BorderColor="Black" BackgroundColor="PaleGreen"/>
+            <Frame Grid.Row="1" Grid.Column="3" BorderColor="Black" BackgroundColor="PaleGreen"/>
+            <Frame Grid.Row="2" Grid.Column="0" BorderColor="Black" BackgroundColor="PeachPuff"/>
+            <Frame Grid.Row="2" Grid.Column="1" BorderColor="Black" BackgroundColor="PeachPuff"/>
+            <Frame Grid.Row="2" Grid.Column="2" BorderColor="Black" BackgroundColor="PeachPuff"/>
+            <Frame Grid.Row="2" Grid.Column="3" BorderColor="Black" BackgroundColor="PeachPuff"/>
+            <Frame Grid.Row="3" Grid.Column="0" BorderColor="Black" BackgroundColor="IndianRed"/>
+            <Frame Grid.Row="3" Grid.Column="1" BorderColor="Black" BackgroundColor="IndianRed"/>
+            <Frame Grid.Row="3" Grid.Column="2" BorderColor="Black" BackgroundColor="IndianRed"/>
+            <Frame Grid.Row="3" Grid.Column="3" BorderColor="Black" BackgroundColor="IndianRed"/>
+            <Frame Grid.Row="4" Grid.Column="0" BorderColor="Black" BackgroundColor="Plum"/>
+            <Frame Grid.Row="4" Grid.Column="1" BorderColor="Black" BackgroundColor="Plum"/>
+            <Frame Grid.Row="4" Grid.Column="2" BorderColor="Black" BackgroundColor="Plum"/>
+            <Frame Grid.Row="4" Grid.Column="3" BorderColor="Black" BackgroundColor="Plum"/>
+
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Text="Connecting Wall Anwsers" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold"/>
+            <Label x:Name="Item1" Grid.Row="1" Grid.Column="0" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label x:Name="Item2" Grid.Row="1" Grid.Column="1" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label x:Name="Item3" Grid.Row="1" Grid.Column="2" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label x:Name="Item4" Grid.Row="1" Grid.Column="3" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Button x:Name="Check1" Grid.Row ="1" Grid.Column="4" BackgroundColor="LightBlue" Text="Reveal" BorderColor="Black" TextColor="Black" Clicked="CheckedOne"/>
+            <Label x:Name="Item5" Grid.Row="2" Grid.Column="0" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label x:Name="Item6" Grid.Row="2" Grid.Column="1" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label x:Name="Item7" Grid.Row="2" Grid.Column="2" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label x:Name="Item8" Grid.Row="2" Grid.Column="3" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Button x:Name="Check2" Grid.Row ="2" Grid.Column="4" BackgroundColor="LightBlue" Text="Reveal" BorderColor="Black" TextColor="Black" Clicked="CheckedTwo"/>
+            <Label x:Name="Item9" Grid.Row="3" Grid.Column="0" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label x:Name="Item10" Grid.Row="3" Grid.Column="1" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label x:Name="Item11" Grid.Row="3" Grid.Column="2" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label x:Name="Item12" Grid.Row="3" Grid.Column="3" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Button x:Name="Check3" Grid.Row ="3" Grid.Column="4" BackgroundColor="LightBlue" Text="Reveal" BorderColor="Black" TextColor="Black" Clicked="CheckedThree"/>
+            <Label x:Name="Item13" Grid.Row="4" Grid.Column="0" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label x:Name="Item14" Grid.Row="4" Grid.Column="1" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label x:Name="Item15" Grid.Row="4" Grid.Column="2" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Label x:Name="Item16" Grid.Row="4" Grid.Column="3" MaxLines="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="Subtitle"/>
+            <Button x:Name="Check4" Grid.Row ="4" Grid.Column="4" BackgroundColor="LightBlue" Text="Reveal" BorderColor="Black" TextColor="Black" Clicked="CheckedFour"/>
         </Grid>
 
         <Grid Grid.Row="1" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*,*,*">

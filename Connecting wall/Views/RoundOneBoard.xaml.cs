@@ -24,6 +24,7 @@ public partial class RoundOneBoard : ContentPage
         Team1ScoreLabel.BindingContext = _team1;
         Team2ScoreLabel.BindingContext = _team2;
         _audioManager = audioManager;
+        if (QuestionList.GetRound1Question(_round).Type == QuestionType.Audio)
         setupaudio();
     }
 
@@ -113,6 +114,13 @@ public partial class RoundOneBoard : ContentPage
 
     private void WhenAnswerClicked(object sender, EventArgs e)
     {
+        if (QuestionList.GetRound1Question(_round).Type == QuestionType.Audio)
+        {
+            player1.Stop();
+            player2.Stop();
+            player3.Stop();
+            player4.Stop();
+        }
         string answerMessage = "Connection: " + QuestionList.GetRound1Question(_round).Connection;
         Answer.Text = answerMessage;
         AnswerButton.IsEnabled = false;

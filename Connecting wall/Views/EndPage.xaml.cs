@@ -19,13 +19,15 @@ public partial class EndPage : ContentPage
         }
 		else if(team1.TeamScore == 0 & team2.TeamScore == 0)
 		{
-			winnerlbl.Text = "You both suck: YOU LOSE";
+			WINNNNNER.Text = "LO00oSSSSERRRR";
+			winnerlbl.Text = "You both SUCK!!!!: YOU LOSE good day sir";
             endImg.Source = "trash.png";
         }
         else if (team1.TeamScore == team2.TeamScore)
         {
             winnerlbl.Text = "TIE";
-            endImg.Source = "tie";
+            endImg.Source = "tie.png";
+			WINNNNNER.Text = WINNNNNER.Text + "$";
         }
     }
 }

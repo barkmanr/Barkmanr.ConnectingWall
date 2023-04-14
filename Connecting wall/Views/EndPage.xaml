@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Connecting_wall.Views.EndPage"
              Title="EndPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    
+    <Grid RowDefinitions="*,*,*" BackgroundColor="Gold">
+        <Label Text="WINNER" FontSize="90" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold,Italic" Grid.Row="0"/>
+        <Image x:Name="endImg" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1"/>
+        <Label x:Name="winnerlbl" FontSize="Title" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold,Italic" Grid.Row="2"/>
+    </Grid>
 </ContentPage>

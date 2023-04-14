@@ -37,9 +37,9 @@ public partial class ConnectingPicker : ContentPage
             _team2.TeamScore--;
     }
 
-    private void FinishClicked(object sender, EventArgs e)
+    private async void FinishClicked(object sender, EventArgs e)
     {
-
+        await Navigation.PushAsync(new EndPage(_team1,_team2));
     }
 
     private async void GoToConectingWallOne(object sender, EventArgs e)

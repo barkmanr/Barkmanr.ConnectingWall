@@ -21,6 +21,16 @@
                    Aspect="AspectFit"
                    Source="question_mark.png"/>
 
+            <Frame x:Name="Frame1" Grid.Row="2" Grid.Column="0" BorderColor="Black" BackgroundColor="Plum" IsVisible="false"/>
+            <Label
+                x:Name="Item1Label"
+                 Grid.Row="2" Grid.Column="0" 
+                 HorizontalOptions="Center"
+                 Margin="5"
+                 MaxLines="5"
+                 FontSize="Medium"/>
+            
+
             <Image
                    x:Name="Item2" 
                    Grid.Row="2" Grid.Column="1" 
@@ -29,6 +39,15 @@
                    Aspect="AspectFit"
                    Source="question_mark.png"/>
 
+            <Frame x:Name="Frame2" Grid.Row="2" Grid.Column="1" BorderColor="Black" BackgroundColor="Plum" IsVisible="false"/>
+            <Label
+                x:Name="Item2Label" 
+                   Grid.Row="2" Grid.Column="1" 
+                   HorizontalOptions="Center"
+                   Margin="5"
+                   MaxLines="5"
+                   FontSize="Medium"/>
+            
             <Image
                    x:Name="Item3" 
                    Grid.Row="2" Grid.Column="2" 
@@ -37,6 +56,14 @@
                    Aspect="AspectFit"
                    Source="question_mark.png"/>
 
+            <Frame x:Name="Frame3" Grid.Row="2" Grid.Column="2" BorderColor="Black" BackgroundColor="Plum" IsVisible="false"/>
+            <Label
+                x:Name="Item3Label" 
+                   Grid.Row="2" Grid.Column="2" 
+                   HorizontalOptions="Center"
+                   Margin="5"
+                   MaxLines="5"
+                   FontSize="Medium"/>
             <Image
                    x:Name="Item4" 
                    Grid.Row="2" Grid.Column="3" 
@@ -44,6 +71,15 @@
                    Margin="5"
                    Aspect="AspectFit"
                    Source="question_mark.png"/>
+
+            <Frame x:Name="Frame4" Grid.Row="2" Grid.Column="3" BorderColor="Black" BackgroundColor="Plum" IsVisible="false"/>
+            <Label
+                x:Name="Item4Label" 
+                   Grid.Row="2" Grid.Column="3" 
+                   HorizontalOptions="Center"
+                   Margin="5"
+                   MaxLines="5"
+                   FontSize="Medium"/>
             <Label
                    x:Name="Point1Label" 
                    Grid.Row="1" Grid.Column="3"

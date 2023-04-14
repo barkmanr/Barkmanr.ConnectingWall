@@ -44,37 +44,43 @@ public partial class RoundOnePicker : ContentPage
 
     private async void GoToBtnOne(object sender, EventArgs e)
     {
-        IsEnabled = false;
+        Symbol1.IsEnabled = false;
+        Symbol1.BackgroundColor = Color.Parse("Grey");
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 1));
     }
 
     private async void GoToBtnTwo(object sender, EventArgs e)
     {
-        IsEnabled = false;
+        Symbol2.IsEnabled = false;
+        Symbol2.BackgroundColor = Color.Parse("Grey");
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 2));
     }
 
     private async void GoToBtnThree(object sender, EventArgs e)
     {
-        IsEnabled = false;
+        Symbol3.IsEnabled = false;
+        Symbol3.BackgroundColor = Color.Parse("Grey");
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 3));
     }
 
     private async void GoToBtnFour(object sender, EventArgs e)
     {
-        IsEnabled = false;
+        Symbol4.IsEnabled = false;
+        Symbol4.BackgroundColor = Color.Parse("Grey");
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 4));
     }
 
     private async void GoToBtnFive(object sender, EventArgs e)
     {
-        IsEnabled = false;
+        Symbol5.IsEnabled = false;
+        Symbol5.BackgroundColor = Color.Parse("Grey");
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 5));
     }
 
     private async void GoToBtnSix(object sender, EventArgs e)
     {
-        IsEnabled = false;
+        Symbol6.IsEnabled = false;
+        Symbol6.BackgroundColor = Color.Parse("Grey");
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 6));
     }
 }

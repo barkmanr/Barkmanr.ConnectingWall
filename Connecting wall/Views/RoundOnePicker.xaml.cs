@@ -3,7 +3,7 @@ using Plugin.Maui.Audio;
 
 namespace Connecting_wall.Views;
 /// <summary>
-/// 
+/// All the cs code for the round one board containing methods that allows for binding between buttons and logic.
 /// </summary>
 public partial class RoundOnePicker : ContentPage
 {
@@ -11,7 +11,7 @@ public partial class RoundOnePicker : ContentPage
     Team _team2;
     IAudioManager _audioManager;
     /// <summary>
-    /// 
+    /// RoundOnePicker constructor
     /// </summary>
     /// <param name="team1"></param>
     /// <param name="team2"></param>
@@ -26,7 +26,7 @@ public partial class RoundOnePicker : ContentPage
         _audioManager = audioManager;
 	}
     /// <summary>
-    /// 
+    /// Event handler for raising score
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
@@ -35,7 +35,7 @@ public partial class RoundOnePicker : ContentPage
         _team1.TeamScore++;
     }
     /// <summary>
-    /// 
+    /// Event Handler for lowering score
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
@@ -45,7 +45,7 @@ public partial class RoundOnePicker : ContentPage
             _team1.TeamScore--;
     }
     /// <summary>
-    /// 
+    /// Event handler for raising score
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
@@ -54,7 +54,7 @@ public partial class RoundOnePicker : ContentPage
         _team2.TeamScore++;
     }
     /// <summary>
-    /// 
+    /// Event Handler for lowering score
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
@@ -64,7 +64,7 @@ public partial class RoundOnePicker : ContentPage
             _team2.TeamScore--;
     }
     /// <summary>
-    /// 
+    /// Event Handler for next button that takes user to round two picker.
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
@@ -73,7 +73,7 @@ public partial class RoundOnePicker : ContentPage
         await Navigation.PushAsync(new RoundTwoPicker(_team1,_team2));
     }
     /// <summary>
-    /// 
+    /// Event handler for symbol button 1
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
@@ -84,7 +84,7 @@ public partial class RoundOnePicker : ContentPage
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 1, _audioManager));
     }
     /// <summary>
-    /// 
+    /// Event handler for symbol button 2
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
@@ -95,7 +95,7 @@ public partial class RoundOnePicker : ContentPage
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 2, _audioManager));
     }
     /// <summary>
-    /// 
+    /// Event handler for symbol button 3
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
@@ -106,7 +106,7 @@ public partial class RoundOnePicker : ContentPage
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 3, _audioManager));
     }
     /// <summary>
-    /// 
+    /// Event handler for symbol button 4
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
@@ -117,7 +117,7 @@ public partial class RoundOnePicker : ContentPage
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 4, _audioManager));
     }
     /// <summary>
-    /// 
+    /// Event handler for symbol button 5
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
@@ -128,7 +128,7 @@ public partial class RoundOnePicker : ContentPage
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 5, _audioManager));
     }
     /// <summary>
-    /// 
+    /// Event handler for symbol button 6
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>

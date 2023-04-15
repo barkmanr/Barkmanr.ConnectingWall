@@ -91,6 +91,7 @@ public partial class RoundTwoBoard : ContentPage
             Item4Label.Text = "\nDescription:\n" + QuestionList.GetRound2Question(_round).Description[3];
             Frame4.IsVisible = true;
         }
+        RevealButton.IsEnabled = false;
     }
 
     //Buttons for team score and back button that takes user back to the Round2Picker

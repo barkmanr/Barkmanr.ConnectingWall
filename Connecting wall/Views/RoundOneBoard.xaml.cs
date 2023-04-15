@@ -172,6 +172,7 @@ public partial class RoundOneBoard : ContentPage
         Frame2.IsVisible = true; 
         Frame3.IsVisible = true; 
         Frame4.IsVisible = true;
+        RevealButton.IsEnabled = false;
     }
     /// <summary>
     /// Event handler for raising team 1 score

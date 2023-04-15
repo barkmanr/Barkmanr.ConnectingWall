@@ -163,7 +163,7 @@
                     Text="Next" 
                     BackgroundColor="PeachPuff"
                     Clicked="NextClicked"
-                    IsEnabled="True"/>
+                    IsEnabled="False"/>
         </Grid>
 
     </Grid>

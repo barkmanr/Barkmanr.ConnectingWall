@@ -14,7 +14,6 @@ public partial class ConnectingPicker : ContentPage
         Team1ScoreLabel.BindingContext = _team1;
         Team2ScoreLabel.BindingContext = _team2;
     }
-
     private void WhenUpClicked1(object sender, EventArgs e)
     {
         _team1.TeamScore++;
@@ -46,6 +45,7 @@ public partial class ConnectingPicker : ContentPage
     {
         OneBtn.IsEnabled= false;
         OneBtn.BackgroundColor = Color.Parse("Grey");
+        if(OneBtn.IsEnabled == false & TwoBtn.IsEnabled == false) FinishButton.IsEnabled = true;
         await Navigation.PushAsync(new ConnectingWall(_team1, _team2, 1));
     }
 
@@ -53,6 +53,7 @@ public partial class ConnectingPicker : ContentPage
     {
         TwoBtn.IsEnabled= false;
         TwoBtn.BackgroundColor = Color.Parse("Grey");
+        if (OneBtn.IsEnabled == false & TwoBtn.IsEnabled == false) FinishButton.IsEnabled = true;
         await Navigation.PushAsync(new ConnectingWall(_team1, _team2, 2));
     }
 }

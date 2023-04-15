@@ -98,14 +98,12 @@
             </Label>
 
             <Button
-                    x:Name="a" 
                     Grid.Row="1" Grid.Column="3"
                     Margin="5"
                     FontSize="Medium"
                     BackgroundColor="LightBlue"
                     IsEnabled="True"/>
             <Button
-                    x:Name="b" 
                     Grid.Row="2" Grid.Column="3"
                     Margin="5"
                     FontSize="Medium"
@@ -156,7 +154,7 @@
                     Text="Next" 
                     BackgroundColor="PeachPuff"
                     Clicked="NextClicked"
-                    IsEnabled="True"/>
+                    IsEnabled="False"/>
         </Grid>
         
         

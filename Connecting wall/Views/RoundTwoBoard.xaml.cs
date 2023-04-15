@@ -87,6 +87,7 @@ public partial class RoundTwoBoard : ContentPage
             Item4Label.Text = "\nDescription:\n" + QuestionList.GetRound2Question(_round).Description[3];
             Frame4.IsVisible = true;
         }
+        RevealButton.IsEnabled = false;
     }
 
     private void WhenUpClicked1(object sender, EventArgs e)

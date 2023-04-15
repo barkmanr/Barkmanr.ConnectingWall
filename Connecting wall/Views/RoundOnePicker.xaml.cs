@@ -49,6 +49,7 @@ public partial class RoundOnePicker : ContentPage
     {
         Symbol1.IsEnabled = false;
         Symbol1.BackgroundColor = Color.Parse("Grey");
+        checkEnabeled();
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 1, _audioManager));
     }
 
@@ -56,6 +57,7 @@ public partial class RoundOnePicker : ContentPage
     {
         Symbol2.IsEnabled = false;
         Symbol2.BackgroundColor = Color.Parse("Grey");
+        checkEnabeled();
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 2, _audioManager));
     }
 
@@ -63,6 +65,7 @@ public partial class RoundOnePicker : ContentPage
     {
         Symbol3.IsEnabled = false;
         Symbol3.BackgroundColor = Color.Parse("Grey");
+        checkEnabeled();
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 3, _audioManager));
     }
 
@@ -70,6 +73,7 @@ public partial class RoundOnePicker : ContentPage
     {
         Symbol4.IsEnabled = false;
         Symbol4.BackgroundColor = Color.Parse("Grey");
+        checkEnabeled();
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 4, _audioManager));
     }
 
@@ -77,6 +81,7 @@ public partial class RoundOnePicker : ContentPage
     {
         Symbol5.IsEnabled = false;
         Symbol5.BackgroundColor = Color.Parse("Grey");
+        checkEnabeled();
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 5, _audioManager));
     }
 
@@ -84,6 +89,16 @@ public partial class RoundOnePicker : ContentPage
     {
         Symbol6.IsEnabled = false;
         Symbol6.BackgroundColor = Color.Parse("Grey");
+        checkEnabeled();
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 6, _audioManager));
+    }
+
+    private void checkEnabeled()
+    {
+        if (Symbol1.IsEnabled == false & Symbol2.IsEnabled == false & Symbol3.IsEnabled == false 
+            & Symbol4.IsEnabled == false & Symbol5.IsEnabled == false & Symbol6.IsEnabled == false) 
+        { 
+            NextButton.IsEnabled = true;
+        }
     }
 }

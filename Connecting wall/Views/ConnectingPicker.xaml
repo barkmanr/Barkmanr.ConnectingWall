@@ -104,7 +104,7 @@
                     Text="Finish" 
                     BackgroundColor="PeachPuff"
                     Clicked="FinishClicked"
-                    IsEnabled="True"/>
+                    IsEnabled="False"/>
         </Grid>
 
 

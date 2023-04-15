@@ -2,7 +2,9 @@ using Connecting_wall.Logic;
 using Microsoft.Maui.Controls;
 
 namespace Connecting_wall.Views;
-
+/// <summary>
+/// Identical to round 1 board logic apart from lacking a fourth item
+/// </summary>
 public partial class RoundTwoBoard : ContentPage
 {
 
@@ -19,7 +21,7 @@ public partial class RoundTwoBoard : ContentPage
         Team1ScoreLabel.BindingContext = _team1;
         Team2ScoreLabel.BindingContext = _team2;
     }
-
+    //Event handler for reveal button but only reveals 3 items instead of the earlier 4
     private void WhenRevealedClicked(object sender, EventArgs e)
     {
         if (QuestionList.GetRound2Question(_round).Type == QuestionType.Image)
@@ -60,7 +62,7 @@ public partial class RoundTwoBoard : ContentPage
         }
         Item += 1;
     }
-
+    //Event handler for answer button
     private void WhenAnswerClicked(object sender, EventArgs e)
     {
         string answerMessage = "Connection: " + QuestionList.GetRound2Question(_round).Connection;
@@ -78,6 +80,8 @@ public partial class RoundTwoBoard : ContentPage
         Frame1.IsVisible = true;
         Frame2.IsVisible = true;
         Frame3.IsVisible = true;
+        //Reveals the fourth item that is the answer for round 2
+        //Checks if it is an question type question before proceeding
         if (QuestionList.GetRound2Question(_round).Type == QuestionType.Image)
         {
             Item4.Source = QuestionList.GetRound2Question(_round).Item[3] + ".png";
@@ -89,6 +93,7 @@ public partial class RoundTwoBoard : ContentPage
         }
     }
 
+    //Buttons for team score and back button that takes user back to the Round2Picker
     private void WhenUpClicked1(object sender, EventArgs e)
     {
         _team1.TeamScore++;

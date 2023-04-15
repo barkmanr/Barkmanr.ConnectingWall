@@ -2,7 +2,9 @@ using Connecting_wall.Logic;
 using Plugin.Maui.Audio;
 
 namespace Connecting_wall.Views;
-
+/// <summary>
+/// 
+/// </summary>
 public partial class RoundOneBoard : ContentPage
 {
     Team _team1;
@@ -14,7 +16,13 @@ public partial class RoundOneBoard : ContentPage
     private IAudioPlayer player2;
     private IAudioPlayer player3;
     private IAudioPlayer player4;
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="team1"></param>
+    /// <param name="team2"></param>
+    /// <param name="round"></param>
+    /// <param name="audioManager"></param>
     public RoundOneBoard(Team team1, Team team2, int round, IAudioManager audioManager)
 	{
 		InitializeComponent();
@@ -27,7 +35,9 @@ public partial class RoundOneBoard : ContentPage
         if (QuestionList.GetRound1Question(_round).Type == QuestionType.Audio)
         setupaudio();
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public async void setupaudio()
     {
         player1 = _audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(QuestionList.GetRound1Question(_round).Item[0] + ".mp3"));
@@ -35,7 +45,11 @@ public partial class RoundOneBoard : ContentPage
         player3 = _audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(QuestionList.GetRound1Question(_round).Item[2] + ".mp3"));
         player4 = _audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(QuestionList.GetRound1Question(_round).Item[3] + ".mp3"));
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void WhenRevealedClicked(object sender, EventArgs e)
     {
         if (QuestionList.GetRound1Question(_round).Type == QuestionType.Image)
@@ -126,7 +140,11 @@ public partial class RoundOneBoard : ContentPage
         }
             Item += 1;
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void WhenAnswerClicked(object sender, EventArgs e)
     {
         if (QuestionList.GetRound1Question(_round).Type == QuestionType.Audio)
@@ -154,28 +172,49 @@ public partial class RoundOneBoard : ContentPage
         Frame3.IsVisible = true; 
         Frame4.IsVisible = true;
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void WhenUpClicked1(object sender, EventArgs e)
     {
         _team1.TeamScore++;
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void WhenDownClicked1(object sender, EventArgs e)
     {
         if (_team1.TeamScore > 0)
             _team1.TeamScore--;
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void WhenUpClicked2(object sender, EventArgs e)
     {
         _team2.TeamScore++;
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void WhenDownClicked2(object sender, EventArgs e)
     {
         if (_team2.TeamScore > 0)
             _team2.TeamScore--;
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private async void BackClicked(object sender, EventArgs e)
     {
         await Navigation.PopAsync();

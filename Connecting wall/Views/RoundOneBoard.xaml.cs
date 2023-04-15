@@ -2,19 +2,28 @@ using Connecting_wall.Logic;
 using Plugin.Maui.Audio;
 
 namespace Connecting_wall.Views;
-
+/// <summary>
+/// All the cs code for the round one board containing methods that allows for binding between buttons and logic.
+/// </summary>
 public partial class RoundOneBoard : ContentPage
 {
-    Team _team1;
-    Team _team2;
-    IAudioManager _audioManager;
-    int _round;
-    private int Item = 1;
+    Team _team1; //Team 1 variable
+    Team _team2; // Team 2 variable
+    IAudioManager _audioManager;  
+    int _round; // Keeps track of the round and enables specific question according to the round number.
+    private int Item = 1; //Setting the item value to one initially so it starts at item one output.
+    // Initializes player objects and makes them global so that they can be obtained from anywhere within the module.
     private IAudioPlayer player1;
     private IAudioPlayer player2;
     private IAudioPlayer player3;
     private IAudioPlayer player4;
-
+    /// <summary>
+    /// Round One board constructor.
+    /// </summary>
+    /// <param name="team1"></param>
+    /// <param name="team2"></param>
+    /// <param name="round"></param>
+    /// <param name="audioManager">audio manager parameter used to create player for audio</param>
     public RoundOneBoard(Team team1, Team team2, int round, IAudioManager audioManager)
 	{
 		InitializeComponent();
@@ -27,7 +36,9 @@ public partial class RoundOneBoard : ContentPage
         if (QuestionList.GetRound1Question(_round).Type == QuestionType.Audio)
         setupaudio();
     }
-
+    /// <summary>
+    /// Function for creating all the players while also setting them up to contain the audio files.
+    /// </summary>
     public async void setupaudio()
     {
         player1 = _audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(QuestionList.GetRound1Question(_round).Item[0] + ".mp3"));
@@ -35,7 +46,11 @@ public partial class RoundOneBoard : ContentPage
         player3 = _audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(QuestionList.GetRound1Question(_round).Item[2] + ".mp3"));
         player4 = _audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(QuestionList.GetRound1Question(_round).Item[3] + ".mp3"));
     }
-
+    /// <summary>
+    /// Event handler for when the reveal button is clicked that contains if/else statements for the three types of questions: text, image, and audio.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void WhenRevealedClicked(object sender, EventArgs e)
     {
         if (QuestionList.GetRound1Question(_round).Type == QuestionType.Image)
@@ -126,7 +141,11 @@ public partial class RoundOneBoard : ContentPage
         }
             Item += 1;
     }
-
+    /// <summary>
+    /// Event handler for the answer button when clicked reveals all the answers//descriptions and ensures audio is stopped if audio type question is in use.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void WhenAnswerClicked(object sender, EventArgs e)
     {
         if (QuestionList.GetRound1Question(_round).Type == QuestionType.Audio)
@@ -155,28 +174,49 @@ public partial class RoundOneBoard : ContentPage
         Frame4.IsVisible = true;
         RevealButton.IsEnabled = false;
     }
+    /// <summary>
+    /// Event handler for raising team 1 score
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void WhenUpClicked1(object sender, EventArgs e)
     {
         _team1.TeamScore++;
     }
-
+    /// <summary>
+    /// Event handler for lowering team 1 score
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void WhenDownClicked1(object sender, EventArgs e)
     {
         if (_team1.TeamScore > 0)
             _team1.TeamScore--;
     }
-
+    /// <summary>
+    /// Event handler for raising team 2 score
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void WhenUpClicked2(object sender, EventArgs e)
     {
         _team2.TeamScore++;
     }
-
+    /// <summary>
+    /// Event handler for lowering team 2 score
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void WhenDownClicked2(object sender, EventArgs e)
     {
         if (_team2.TeamScore > 0)
             _team2.TeamScore--;
     }
-
+    /// <summary>
+    /// Event handler for back button which takes user back to round one picker.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private async void BackClicked(object sender, EventArgs e)
     {
         await Navigation.PopAsync();

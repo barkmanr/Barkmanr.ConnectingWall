@@ -4,7 +4,9 @@
              x:Class="Connecting_wall.Views.RoundOnePicker"
              Title="RoundOnePicker">
 
+    <!--Grid that contains three grids within-->
     <Grid RowDefinitions=".7*,3.5*,3*">
+        <!--First grid responsible for containing label asking user to pick a symbol button-->
         <Grid Grid.Row="0">
             <Label
                 FontSize="Medium">
@@ -12,6 +14,7 @@
             </Label>
                
         </Grid>
+        <!--Second Grid Responsible for containing the symbol buttons that will take user to RoundOneBoard page-->
         <Grid Grid.Row="1" RowDefinitions="*,*" ColumnDefinitions="*,*,*">
             <Button
                     x:Name="Symbol1" 
@@ -68,14 +71,15 @@
                     IsEnabled="True"
                     Clicked="GoToBtnSix"/>
         </Grid>
-
+        <!--Last grid responsible for holding the team scores/numeric up down and next button-->
         <Grid Grid.Row="2" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*,*,*">
-
+            <!--Team score labels-->
             <Label 
                    x:Name="Team1ScoreLabel" 
                    Grid.Row="0" Grid.Column="0"            
                    HorizontalOptions="Center" VerticalOptions="Center" 
                    FontSize="Medium">
+                <!--Binding for team name and score-->
                 <Label.Text>
                     <MultiBinding StringFormat="{}{0}s Score: {1}">
                         <Binding Path="TeamName" />
@@ -83,12 +87,12 @@
                     </MultiBinding>
                 </Label.Text>
             </Label>
-
             <Label 
                    x:Name="Team2ScoreLabel" 
                    Grid.Row="0" Grid.Column="1" 
                    HorizontalOptions="Center" VerticalOptions="Center" 
                    FontSize="Medium" >
+                <!--Binding for team name and score-->
                 <Label.Text>
                     <MultiBinding StringFormat="{}{0}s Score: {1}"  >
                         <Binding Path="TeamName" />
@@ -97,6 +101,7 @@
                 </Label.Text>
             </Label>
 
+            <!--Buttons that exist to maintain consistency of design but do not have purpose unless on other page-->
             <Button
                     Grid.Row="1" Grid.Column="3"
                     Margin="5"
@@ -110,6 +115,7 @@
                     BackgroundColor="LightBlue"
                     IsEnabled="True"/>
             
+            <!--Team buttons-->
             <Button
                     x:Name="Team1UpButton" 
                     Grid.Row="1" Grid.Column="0"
@@ -146,6 +152,8 @@
                     BackgroundColor="Pink"
                     Clicked="WhenDownClicked2"
                     IsEnabled="True"/>
+            
+            <!--Next button responsible for taking user to round 2-->
             <Button
                     x:Name="NextButton" 
                     Grid.Row="1" Grid.Column="4" Grid.RowSpan="2"

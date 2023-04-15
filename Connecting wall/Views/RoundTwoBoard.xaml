@@ -3,8 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Connecting_wall.Views.RoundTwoBoard"
              Title="RoundTwoBoard">
+    <!--Master grid that contains the two grids-->
     <Grid RowDefinitions="3.5*,3*">
+        <!--First grid defintions-->
         <Grid Grid.Row="0" RowDefinitions="0.5*,*,2*,*" ColumnDefinitions="*,*,*,*">
+            <!--Title of page-->
             <Label 
                 Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
                 Text="Round 2" 
@@ -12,7 +15,7 @@
                 FontSize="Title" 
                 FontAttributes="Bold"/>
 
-            <!--Image controls to show reveal the items-->
+            <!--Image controls to reveal the items underneath question mark image-->
             <Image
                    x:Name="Item1" 
                    Grid.Row="2" Grid.Column="0" 
@@ -21,6 +24,7 @@
                    Aspect="AspectFit"
                    Source="question_mark.png"/>
 
+            <!-- Frame and label that contain the item and description of item-->
             <Frame x:Name="Frame1" Grid.Row="2" Grid.Column="0" BorderColor="Black" BackgroundColor="LightCoral" IsVisible="false"/>
             <Label
                 x:Name="Item1Label"
@@ -38,6 +42,7 @@
                    Aspect="AspectFit"
                    Source="question_mark.png"/>
 
+            <!-- Frame and label that contain the item and description of item-->
             <Frame x:Name="Frame2" Grid.Row="2" Grid.Column="1" BorderColor="Black" BackgroundColor="LightCoral" IsVisible="false"/>
             <Label
                 x:Name="Item2Label" 
@@ -55,6 +60,7 @@
                    Aspect="AspectFit"
                    Source="question_mark.png"/>
 
+            <!-- Frame and label that contain the item and description of item-->
             <Frame x:Name="Frame3" Grid.Row="2" Grid.Column="2" BorderColor="Black" BackgroundColor="LightCoral" IsVisible="false"/>
             <Label
                 x:Name="Item3Label" 
@@ -72,6 +78,7 @@
                    Aspect="AspectFit"
                    Source="question_mark.png"/>
 
+            <!-- Frame and label that contain the description of item-->
             <Frame x:Name="Frame4" Grid.Row="2" Grid.Column="3" BorderColor="Black" BackgroundColor="LightCoral" IsVisible="false"/>
             <Label
                 x:Name="Item4Label" 
@@ -80,7 +87,7 @@
                    Margin="5"
                    MaxLines="5"
                    FontSize="Small"/>
-            
+            <!--Answer label that replaces the 1 point label in round 1 and is responsible for showing the final item-->
             <Label
                    x:Name="AnswerLabel" 
                    Grid.Row="1" Grid.Column="3"
@@ -90,6 +97,7 @@
                    Text="Answer"
                    FontAttributes="Bold, Italic"/>
             
+            <!--Point labels-->
             <Label
                    x:Name="Point2Label" 
                    Grid.Row="1" Grid.Column="2"
@@ -122,6 +130,7 @@
                    Text="Connection: "/>
 
         </Grid>
+        <!--Last grid responsible for holding the team scores/numeric up down and next button-->
         <Grid Grid.Row="1" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*,*,*">
 
             <!--Labels to show both teams scores-->
@@ -130,6 +139,7 @@
                    Grid.Row="0" Grid.Column="0"            
                    HorizontalOptions="Center" VerticalOptions="Center" 
                    FontSize="Medium">
+                <!--Team label binding name and score-->
                 <Label.Text>
                     <MultiBinding StringFormat="{}{0}s Score: {1}">
                         <Binding Path="TeamName" />
@@ -149,7 +159,8 @@
                     </MultiBinding>
                 </Label.Text>
             </Label>
-
+            
+            <!--Same buttons from round 1-->
             <Button
                     x:Name="RevealButton" 
                     Grid.Row="1" Grid.Column="3"

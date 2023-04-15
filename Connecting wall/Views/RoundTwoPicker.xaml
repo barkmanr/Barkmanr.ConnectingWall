@@ -3,8 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Connecting_wall.Views.RoundTwoPicker"
              Title="RoundTwoPicker">
-    
+    <!--Grid that contains three grids within-->
     <Grid RowDefinitions=".7*,3.5*,3*">
+        <!--First grid responsible for containing label asking user to pick a symbol button-->
         <Grid Grid.Row="0">
             <Label
                 FontSize="Medium">
@@ -12,6 +13,7 @@
             </Label>
 
         </Grid>
+        <!-- Second Grid Responsible for containing the symbol buttons that will take user to RoundTwoBoard page-->
         <Grid Grid.Row="1" RowDefinitions="*,*" ColumnDefinitions="*,*,*">
             <Button
                     x:Name="Symbol1" 
@@ -68,7 +70,7 @@
                     IsEnabled="True"
                     Clicked="GoToBtnSix"/>
         </Grid>
-
+        <!--Last grid responsible for holding the team scores/numeric up down and next button-->
         <Grid Grid.Row="2" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*,*,*">
 
             <Label 
@@ -77,6 +79,7 @@
                    HorizontalOptions="Center" VerticalOptions="Center" 
                    FontSize="Medium">
                 <Label.Text>
+                    <!--Binding for team name and score-->
                     <MultiBinding StringFormat="{}{0}s Score: {1}">
                         <Binding Path="TeamName" />
                         <Binding Path="TeamScore" />
@@ -90,13 +93,15 @@
                    HorizontalOptions="Center" VerticalOptions="Center" 
                    FontSize="Medium" >
                 <Label.Text>
+                    <!--Binding for team name and score-->
                     <MultiBinding StringFormat="{}{0}s Score: {1}"  >
                         <Binding Path="TeamName" />
                         <Binding Path="TeamScore"/>
                     </MultiBinding>
                 </Label.Text>
             </Label>
-
+            
+            <!--Team buttons-->
             <Button
                     x:Name="a" 
                     Grid.Row="1" Grid.Column="3"
@@ -148,6 +153,8 @@
                     BackgroundColor="Pink"
                     Clicked="WhenDownClicked2"
                     IsEnabled="True"/>
+            
+            <!--Next button responsible for taking user to round 3 connecting wall-->
             <Button
                     x:Name="NextButton" 
                     Grid.Row="1" Grid.Column="4" Grid.RowSpan="2"

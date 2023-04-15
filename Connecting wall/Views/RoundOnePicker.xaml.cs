@@ -79,9 +79,11 @@ public partial class RoundOnePicker : ContentPage
     /// <param name="e"></param>
     private async void GoToBtnOne(object sender, EventArgs e)
     {
+        //Disables button after initial use
         Symbol1.IsEnabled = false;
+        //Changes button to grey to showcase that it is disabled
         Symbol1.BackgroundColor = Color.Parse("Grey");
-        checkEnabeled();
+        checkEnabled();
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 1, _audioManager));
     }
     /// <summary>
@@ -91,9 +93,11 @@ public partial class RoundOnePicker : ContentPage
     /// <param name="e"></param>
     private async void GoToBtnTwo(object sender, EventArgs e)
     {
+        //Disables button after initial use
         Symbol2.IsEnabled = false;
+        //Changes button to grey to showcase that it is disabled
         Symbol2.BackgroundColor = Color.Parse("Grey");
-        checkEnabeled();
+        checkEnabled();
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 2, _audioManager));
     }
     /// <summary>
@@ -103,9 +107,11 @@ public partial class RoundOnePicker : ContentPage
     /// <param name="e"></param>
     private async void GoToBtnThree(object sender, EventArgs e)
     {
+        //Disables button after initial use
         Symbol3.IsEnabled = false;
+        //Changes button to grey to showcase that it is disabled
         Symbol3.BackgroundColor = Color.Parse("Grey");
-        checkEnabeled();
+        checkEnabled();
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 3, _audioManager));
     }
     /// <summary>
@@ -115,9 +121,11 @@ public partial class RoundOnePicker : ContentPage
     /// <param name="e"></param>
     private async void GoToBtnFour(object sender, EventArgs e)
     {
+        //Disables button after initial use
         Symbol4.IsEnabled = false;
+        //Changes button to grey to showcase that it is disabled
         Symbol4.BackgroundColor = Color.Parse("Grey");
-        checkEnabeled();
+        checkEnabled();
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 4, _audioManager));
     }
     /// <summary>
@@ -127,9 +135,11 @@ public partial class RoundOnePicker : ContentPage
     /// <param name="e"></param>
     private async void GoToBtnFive(object sender, EventArgs e)
     {
+        //Disables button after initial use
         Symbol5.IsEnabled = false;
+        //Changes button to grey to showcase that it is disabled
         Symbol5.BackgroundColor = Color.Parse("Grey");
-        checkEnabeled();
+        checkEnabled();
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 5, _audioManager));
     }
     /// <summary>
@@ -139,13 +149,15 @@ public partial class RoundOnePicker : ContentPage
     /// <param name="e"></param>
     private async void GoToBtnSix(object sender, EventArgs e)
     {
+        //Disables button after initial use
         Symbol6.IsEnabled = false;
+        //Changes button to grey to showcase that it is disabled
         Symbol6.BackgroundColor = Color.Parse("Grey");
-        checkEnabeled();
+        checkEnabled();
         await Navigation.PushAsync(new RoundOneBoard(_team1, _team2, 6, _audioManager));
     }
-
-    private void checkEnabeled()
+    //Enables next button after all symbol buttons are disabled
+    private void checkEnabled()
     {
         if (Symbol1.IsEnabled == false & Symbol2.IsEnabled == false & Symbol3.IsEnabled == false 
             & Symbol4.IsEnabled == false & Symbol5.IsEnabled == false & Symbol6.IsEnabled == false) 

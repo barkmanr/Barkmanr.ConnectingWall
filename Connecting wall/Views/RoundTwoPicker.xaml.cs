@@ -77,9 +77,11 @@ public partial class RoundTwoPicker : ContentPage
     /// <param name="e"></param>
     private async void GoToBtnOne(object sender, EventArgs e)
     {
+        //Disables button after initial use
         Symbol1.IsEnabled = false;
+        //Changes button to grey to showcase that it is disabled
         Symbol1.BackgroundColor = Color.Parse("Grey");
-        checkEnabeled();
+        checkEnabled();
         await Navigation.PushAsync(new RoundTwoBoard(_team1, _team2, 1));
     }
 
@@ -90,9 +92,11 @@ public partial class RoundTwoPicker : ContentPage
     /// <param name="e"></param>
     private async void GoToBtnTwo(object sender, EventArgs e)
     {
+        //Disables button after initial use
         Symbol2.IsEnabled = false;
+        //Changes button to grey to showcase that it is disabled
         Symbol2.BackgroundColor = Color.Parse("Grey");
-        checkEnabeled();
+        checkEnabled();
         await Navigation.PushAsync(new RoundTwoBoard(_team1, _team2, 2));
     }
     /// <summary>
@@ -102,9 +106,11 @@ public partial class RoundTwoPicker : ContentPage
     /// <param name="e"></param>
     private async void GoToBtnThree(object sender, EventArgs e)
     {
+        //Disables button after initial use
         Symbol3.IsEnabled = false;
+        //Changes button to grey to showcase that it is disabled
         Symbol3.BackgroundColor = Color.Parse("Grey");
-        checkEnabeled();
+        checkEnabled();
         await Navigation.PushAsync(new RoundTwoBoard(_team1, _team2, 3));
     }
     /// <summary>
@@ -114,9 +120,11 @@ public partial class RoundTwoPicker : ContentPage
     /// <param name="e"></param>
     private async void GoToBtnFour(object sender, EventArgs e)
     {
+        //Disables button after initial use
         Symbol4.IsEnabled = false;
+        //Changes button to grey to showcase that it is disabled
         Symbol4.BackgroundColor = Color.Parse("Grey");
-        checkEnabeled();
+        checkEnabled();
         await Navigation.PushAsync(new RoundTwoBoard(_team1, _team2, 4));
     }
     /// <summary>
@@ -126,9 +134,11 @@ public partial class RoundTwoPicker : ContentPage
     /// <param name="e"></param>
     private async void GoToBtnFive(object sender, EventArgs e)
     {
+        //Disables button after initial use
         Symbol5.IsEnabled = false;
+        //Changes button to grey to showcase that it is disabled
         Symbol5.BackgroundColor = Color.Parse("Grey");
-        checkEnabeled();
+        checkEnabled();
         await Navigation.PushAsync(new RoundTwoBoard(_team1, _team2, 5));
     }
     /// <summary>
@@ -138,13 +148,15 @@ public partial class RoundTwoPicker : ContentPage
     /// <param name="e"></param>
     private async void GoToBtnSix(object sender, EventArgs e)
     {
+        //Disables button after initial use
         Symbol6.IsEnabled = false;
+        //Changes button to grey to showcase that it is disabled
         Symbol6.BackgroundColor = Color.Parse("Grey");
-        checkEnabeled();
+        checkEnabled();
         await Navigation.PushAsync(new RoundTwoBoard(_team1, _team2, 6));
     }
 
-    private void checkEnabeled()
+    private void checkEnabled()
     {
         if (Symbol1.IsEnabled == false & Symbol2.IsEnabled == false & Symbol3.IsEnabled == false
             & Symbol4.IsEnabled == false & Symbol5.IsEnabled == false & Symbol6.IsEnabled == false)

@@ -156,6 +156,7 @@ public partial class RoundTwoPicker : ContentPage
         await Navigation.PushAsync(new RoundTwoBoard(_team1, _team2, 6));
     }
 
+    //Enables next button after all symbol buttons are disabled
     private void checkEnabled()
     {
         if (Symbol1.IsEnabled == false & Symbol2.IsEnabled == false & Symbol3.IsEnabled == false

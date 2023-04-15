@@ -7,6 +7,7 @@
     <Grid RowDefinitions="3.5*,3*">
         <Grid RowDefinitions="0.5*,*,*,*,*" ColumnDefinitions="*,*,*,*,*" Grid.Row="0" >
 
+            <!-- frames to have boarder -->
             <Frame Grid.Row="1" Grid.Column="0" BorderColor="Black" BackgroundColor="PaleGreen"/>
             <Frame Grid.Row="1" Grid.Column="1" BorderColor="Black" BackgroundColor="PaleGreen"/>
             <Frame Grid.Row="1" Grid.Column="2" BorderColor="Black" BackgroundColor="PaleGreen"/>
@@ -75,19 +76,15 @@
             </Label>
 
             <Button
-                    x:Name="a" 
                     Grid.Row="1" Grid.Column="3"
                     Margin="5"
-                    FontSize="Medium"
-                    Text="a" 
+                    FontSize="Medium" 
                     BackgroundColor="LightBlue"
                     IsEnabled="True"/>
             <Button
-                    x:Name="b" 
                     Grid.Row="2" Grid.Column="3"
                     Margin="5"
                     FontSize="Medium"
-                    Text="b" 
                     BackgroundColor="LightBlue"
                     IsEnabled="True"/>
             <Button

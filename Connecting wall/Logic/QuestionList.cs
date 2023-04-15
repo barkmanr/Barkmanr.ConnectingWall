@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace Connecting_wall.Logic
 {
+    /// <summary>
+    /// Static class that holds 4 list of questions for each round
+    /// size: 6,6,4,4 (20 connections total)
+    /// </summary>
     public static class QuestionList
     {
         private static List<Question> _round1 = new List<Question>();
@@ -34,7 +38,10 @@ namespace Connecting_wall.Logic
             get { return _round3B; }
         }
 
-        //This will be eddited later on
+        /// <summary>
+        /// hard coded list of question setup
+        /// wanted to have json 
+        /// </summary>
         public static void SetUpQuestions1()
         {
             _round1.Add(new Question(new List<string> { "Brian Jones", "Jimi Hendrix", "Jordan Cross", "Kurt Kobain" }, new List<string>
@@ -136,6 +143,12 @@ namespace Connecting_wall.Logic
                 "Things that go boom in video games", QuestionType.Normal));
         }
 
+        /// <summary>
+        /// will return a question based on a round given
+        /// </summary>
+        /// <param name="x">_round number</param>
+        /// <returns>Question</returns>
+        /// <exception cref="Exception">if not in range</exception>
         public static Question GetRound1Question(int x)
         {
             if (x > 6 || x < 1)
@@ -149,6 +162,14 @@ namespace Connecting_wall.Logic
             return _round2[x - 1];
         }
 
+        /// <summary>
+        /// will check 4 items clicked and see if they belong to the same connection
+        /// </summary>
+        /// <param name="a">item 1</param>
+        /// <param name="b">item 2</param>
+        /// <param name="c">item 3</param>
+        /// <param name="d">item 4</param>
+        /// <returns>bool</returns>
         public static bool CheckRound3AQuestions(string a,string b,string c,string d)
         {
             foreach (Question question in Round3A)
@@ -171,6 +192,9 @@ namespace Connecting_wall.Logic
             return false;
         }
 
+        /// <summary>
+        /// Will setup all the questions so that all apps can use
+        /// </summary>
         public static void SetUpAllQuestions()
         {
             SetUpQuestions1();

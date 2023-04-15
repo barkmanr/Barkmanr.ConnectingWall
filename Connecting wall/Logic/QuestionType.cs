@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Connecting_wall.Logic
 {
+    /// <summary>
+    /// type of the question
+    /// some round will act differently
+    /// </summary>
     public enum QuestionType
     {
         Normal = 10,

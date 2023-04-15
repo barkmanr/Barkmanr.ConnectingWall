@@ -3,6 +3,9 @@ using Plugin.Maui.Audio;
 
 namespace Connecting_wall.Views;
 
+/// <summary>
+/// Starter page to get users to enter team name
+/// </summary>
 public partial class StarterPage : ContentPage
 {
 	IAudioManager _audioManager;
@@ -13,6 +16,11 @@ public partial class StarterPage : ContentPage
 		_audioManager = audioManager;
 	}
 
+	/// <summary>
+	/// Makes sure two team names are entered before starting
+	/// </summary>
+	/// <param name="sender"></param>
+	/// <param name="e"></param>
     private async void GoToRoundOne(object sender, EventArgs e)
     {
 		try

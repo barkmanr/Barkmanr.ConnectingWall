@@ -2,6 +2,9 @@ using Connecting_wall.Logic;
 
 namespace Connecting_wall.Views;
 
+/// <summary>
+/// Part where user can get points based on knowing the connectiong
+/// </summary>
 public partial class ConnectingAnwsers : ContentPage
 {
     Team _team1;
@@ -46,7 +49,9 @@ public partial class ConnectingAnwsers : ContentPage
         Navigation.RemovePage(Navigation.NavigationStack[Navigation.NavigationStack.Count - 2]);
         await Navigation.PopAsync();
     }
-
+    /// <summary>
+    /// Will setup the board to show all 4 questions 
+    /// </summary>
     private void setUpBoard()
     {
         if (_round == 1)
@@ -75,6 +80,11 @@ public partial class ConnectingAnwsers : ContentPage
         Item16.Text = _questions[3].Item[3];
     }
 
+    /// <summary>
+    /// will reveal the connection and discription for the given items
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void CheckedOne(object sender, EventArgs e)
     {
         Item1.Text = _questions[0].Description[0];

@@ -2,6 +2,9 @@ using Connecting_wall.Logic;
 
 namespace Connecting_wall.Views;
 
+/// <summary>
+/// board that takes user to ConnectingWall
+/// </summary>
 public partial class ConnectingPicker : ContentPage
 {
     Team _team1;
@@ -41,6 +44,11 @@ public partial class ConnectingPicker : ContentPage
         await Navigation.PushAsync(new EndPage(_team1,_team2));
     }
 
+    /// <summary>
+    /// one of the options that take user to the wall
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private async void GoToConectingWallOne(object sender, EventArgs e)
     {
         OneBtn.IsEnabled= false;

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Connecting_wall.Views.StarterPage"
              Title="StarterPage">
+    
     <Grid RowDefinitions="2*,2*,*,*,*,*,*,2*,*" ColumnDefinitions="*,4*,*" BackgroundColor="Gold">
         <Label Text="Only Connect" FontSize="Title" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1" FontAttributes="Italic,Bold"/>
         <Image Grid.Row="1" Source="onlyconnect.png" Grid.Column="1"/>

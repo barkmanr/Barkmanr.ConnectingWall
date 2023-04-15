@@ -8,6 +8,12 @@ using System.Threading.Tasks;
 
 namespace Connecting_wall.Logic
 {
+    /// <summary>
+    /// One question has 4 items 
+    /// 4 description 
+    /// the connection
+    /// and the type of the items
+    /// </summary>
     public class Question
     {
         private List<string> _items = new List<string>();
@@ -68,6 +74,14 @@ namespace Connecting_wall.Logic
 
 
         //This is for the connecting wall. checks if four items are in a conection
+        /// <summary>
+        /// Will check if 4 items match to one question
+        /// </summary>
+        /// <param name="item1"> first item</param>
+        /// <param name="item2"> second item </param>
+        /// <param name="item3"> third item</param>
+        /// <param name="item4">forth item</param>
+        /// <returns>bool</returns>
         public bool CheckItems(string item1,string item2,string item3,string item4) 
         {
             if (!Item.Contains(item1))

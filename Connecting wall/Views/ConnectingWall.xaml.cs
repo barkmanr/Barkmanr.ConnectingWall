@@ -2,7 +2,10 @@ using Connecting_wall.Logic;
 using System.Timers;
 
 namespace Connecting_wall.Views;
-
+/// <summary>
+/// Game for selecting 4 items and seeing if they match
+/// is a timer
+/// </summary>
 public partial class ConnectingWall : ContentPage
 {
     Team _team1;
@@ -43,6 +46,12 @@ public partial class ConnectingWall : ContentPage
         CWB16.IsEnabled = false;
     }
 
+    /// <summary>
+    /// will tick every second until 90 second happen
+    /// will disable all options
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void EndTime(object sender, EventArgs e)
     {
         seconds--;
@@ -91,6 +100,11 @@ public partial class ConnectingWall : ContentPage
             _team2.TeamScore--;
     }
 
+    /// <summary>
+    /// starts the timer and enables all items
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void TimerButtonClicked(object sender, EventArgs e)
     {
         CWB1.IsEnabled = true;
@@ -113,6 +127,11 @@ public partial class ConnectingWall : ContentPage
         TimerButton.IsEnabled = false;
     }
 
+    /// <summary>
+    /// will find if the 4 selected items match
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void CheckCliked(object sender, EventArgs e)
     {
         List<string> items = new List<string>();
@@ -178,6 +197,9 @@ public partial class ConnectingWall : ContentPage
         await Navigation.PushAsync(new ConnectingAnwsers(_team1,_team2,_round));
     }
 
+    /// <summary>
+    /// will setup the 16 items randomly troughtout the 4 x 4 grid
+    /// </summary>
     private void setUpBoard()
     {
         List<Question> questions;
@@ -229,6 +251,12 @@ public partial class ConnectingWall : ContentPage
 
     }
 
+    /// <summary>
+    /// will change color between blue and puff
+    /// only 4 blue items at a time
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void OneClicked(object sender, EventArgs e)
     {
         if (CWB1.BackgroundColor == Color.Parse("Lightblue"))
@@ -501,6 +529,10 @@ public partial class ConnectingWall : ContentPage
         }
     }
 
+    /// <summary>
+    /// Will change all blue colored items color
+    /// </summary>
+    /// <param name="color">the corlor it will change to</param>
     private void ChangeButtonsColor(string color)
     {
         if (CWB1.BackgroundColor == Color.Parse("Lightblue")) CWB1.BackgroundColor = Color.Parse(color);
@@ -520,6 +552,9 @@ public partial class ConnectingWall : ContentPage
         if (CWB15.BackgroundColor == Color.Parse("Lightblue")) CWB15.BackgroundColor = Color.Parse(color);
         if (CWB16.BackgroundColor == Color.Parse("Lightblue")) CWB16.BackgroundColor = Color.Parse(color);
     }
+    /// <summary>
+    /// Will disable all green colored items
+    /// </summary>
     private void LockGreen()
     {
         if (CWB1.BackgroundColor == Color.Parse("paleGreen")) CWB1.IsEnabled= false;

@@ -1,5 +1,6 @@
 using Connecting_wall.Logic;
 using Plugin.Maui.Audio;
+using System.IO;
 
 namespace Connecting_wall.Views;
 
@@ -25,9 +26,10 @@ public partial class StarterPage : ContentPage
     {
 		try
 		{
+
 			Team team1 = new Team(0, TeamOneEnt.Text);
 			Team team2 = new Team(0, TeamTwoEnt.Text);
-			QuestionList.SetUpAllQuestions();
+			QuestionList.SetUpAllQuestions(); //set up all questions 
 			await Navigation.PushAsync(new RoundOnePicker(team1, team2, _audioManager));
 		}
 		catch (Exception ex)

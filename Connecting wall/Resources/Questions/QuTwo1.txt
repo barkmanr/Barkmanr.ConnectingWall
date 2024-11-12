@@ -1,0 +1,11 @@
+Eleven
+One hundred
+One hundred and One 
+One hundred and ten
+11 = 3
+100 = 4
+101 = 5
+110 = 6
+Binary adding one
+10
+Normal

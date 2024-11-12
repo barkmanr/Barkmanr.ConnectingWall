@@ -5,20 +5,21 @@ using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Connecting_wall.Logic
 {
-    /// <summary>
-    /// Static class that holds 4 list of questions for each round
-    /// size: 6,6,4,4 (20 connections total)
-    /// </summary>
+    //I wan't to add 5th round; no vowels 
+    //I wan't to add filess to be read
+
     public static class QuestionList
     {
-        private static List<Question> _round1 = new List<Question>();
-        private static List<Question> _round2 = new List<Question>();
-        private static List<Question> _round3A = new List<Question>();
-        private static List<Question> _round3B = new List<Question>();
+        private static List<Question> _round1 = new List<Question>(); //find connection
+        private static List<Question> _round2 = new List<Question>(); //find 4th item
+        private static List<Question> _round3A = new List<Question>(); //Conection wall 1
+        private static List<Question> _round3B = new List<Question>(); //Conecting wall 2
 
+        // getting the questions
         public static IReadOnlyCollection<Question> Round1
         {
             get { return _round1; }
@@ -38,117 +39,145 @@ namespace Connecting_wall.Logic
             get { return _round3B; }
         }
 
-        /// <summary>
-        /// hard coded list of question setup
-        /// wanted to have json 
-        /// </summary>
+        public static string[] readfile (string filePath)
+        {
+              using (StreamReader file = new StreamReader(filePath))
+                {
+                string[] items = new string[10];
+                    for (int i = 0; i < items.Length; i++)
+                    {
+                        items[i] = file.ReadLine();
+                    }
+                    return items;
+                }
+        }
+
+                //Hard-codded
         public static void SetUpQuestions1()
         {
-            _round1.Add(new Question(new List<string> { "Brian Jones", "Jimi Hendrix", "Jordan Cross", "Kurt Kobain" }, new List<string>
-            { "founder and original leader of the rolling stones(1942 - 1969)", "Considered one of the greatest Guitarists. (1942 - 1970)", 
-                "Target on the video game “Hitman” on the level “club 27”. Killed on his 27th birthday","Started the idea of 27 club. Killed himself. (1967 - 1994)" },
-                "27 club. Died at the age of 27.", QuestionType.Normal));
+            string path = @"C:\Users\Ryan\Documents\Code Term 2\Connecting wall\Connecting wall\Resources\Questions\";
+            string[] items = readfile(path + "QuOne1.txt");
 
-            _round1.Add(new Question(new List<string> { "Perfect bowling game", "Partridge", "Chinese zodiac signs", "Eggs" }, new List<string>
-            { "12 strikes", "Partridge in a pear tree - 12 days of Christmas","12 Chinese zodiac signs","A dozen eggs" },
-                "12", QuestionType.Normal));
+            _round1.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9]) )) ;
 
-            _round1.Add(new Question(new List<string> { "Miscommunication", "Tragedy", "Resurrection", "The Chosen One" }, new List<string>
-            { "When characters miscommunicate to create conflict.", "Having a character experience a tragic event.",
-                "Bringing a character back from the dead.","Having the protagonist be the chosen important one." },
-                "Common story writing tropes.", QuestionType.Normal));
+            items = readfile(path + "QuOne2.txt");
+            _round1.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9]) ));
 
-            _round1.Add(new Question(new List<string> { "Lol", "Cod", "Csgo", "Gta" }, new List<string>
-            { "League of Legends", "Call of duty","Counter Strike Global Offensive","Grand theft auto" },
-                "Video game acronyms", QuestionType.Normal));
+            items = readfile(path + "QuOne3.txt");
+            _round1.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
 
-        //These are special rounds, but for now act if they are normal
-            _round1.Add(new Question(new List<string> { "world", "magnitude", "soda", "balloon" }, new List<string>
-            { "Pop Goes the World - Men Without Hats", "Magnitude - community “Pop Pop”","Soda pop","Balloon" },
-                "Pop", QuestionType.Image));
+            items = readfile(path + "QuOne9.txt");
+            _round1.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
 
-            _round1.Add(new Question(new List<string> { "thunderstruck", "gospeltruth", "greasedlightning", "thunder" }, new List<string>
-            { "Thunderstruck - AC/DC", "Gospel Truth - Hercules (talks about Zeus who can throw thunderbolts)",
-                "Greased Lightning’ - John Travolta","Thunder - Imagine Dragons" },
-               "Songs about thunder/lightning", QuestionType.Audio));
+            items = readfile(path + "QuOne5.txt");
+            _round1.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
+
+            items = readfile(path + "QuOne6.txt");
+            _round1.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
 
         }
 
         public static void SetUpQuestions2()
         {
-            _round2.Add(new Question(new List<string> { "Eleven", "One hundred", "One hundred and One", "One hundred and ten" }, new List<string>
-            { "11 = 3", "100 = 4","101 = 5","110 = 6" },
-                "Binary adding one", QuestionType.Normal));
+            string path = @"C:\Users\Ryan\Documents\Code Term 2\Connecting wall\Connecting wall\Resources\Questions\";
+            string[] items = readfile(path + "QuTwo1.txt");
 
-            _round2.Add(new Question(new List<string> { "Delaware", "Florida", "Georgia", "Hawaii" }, new List<string>
-            { "8th", "9th","10th","11th" },
-                "U.S. States in alphabetical order", QuestionType.Normal));
+            _round2.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
 
-            _round2.Add(new Question(new List<string> { "Stone", "Secrets", "Azkaban", "Fire" }, new List<string>
-            { "Harry Potter and the Philosopher's Stone", "Harry Potter and the Chamber of Secrets",
-                "Harry Potter and the Prisoner of Azkaban","Harry Potter and the Goblet of Fire" },
-                "Last words of Harry Potter titles ", QuestionType.Normal));
+            items = readfile(path + "QuTwo2.txt");
+            _round2.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
 
-            _round2.Add(new Question(new List<string> { "Revenge of the Sith", "Solo", "Rouge One", "A New Hope" }, new List<string>
-            { "3rd", "4th","5th","6th" },
-                "Starwar Movies in timeline order ", QuestionType.Normal));
+            items = readfile(path + "QuTwo3.txt");
+            _round2.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
 
-            _round2.Add(new Question(new List<string> { "Orange", "Yellow", "Green", "Blue" }, new List<string>
-            { "2nd", "3rd","4th","5th" },
-                "Order of the rainbow", QuestionType.Normal));
+            items = readfile(path + "QuTwo4.txt");
+            _round2.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
 
-            _round2.Add(new Question(new List<string> { "rock", "paper", "scissors", "shoot" }, new List<string>
-            { "Dwane “The Rock” Jhonson", "Paper Mario","Edward Scissor Hands","Shoot" },
-                "Game of RPS", QuestionType.Image));
+            items = readfile(path + "QuTwo5.txt");
+            _round2.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
+
+            items = readfile(path + "QuTwo6.txt");
+            _round2.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
         }
 
         public static void SetUpQuestions3A()
         {
-            _round3A.Add(new Question(new List<string> { "Hatch", "Fabio", "Cochran", "Boston Rob" }, new List<string>
-            { "Richard Hatch - Season 1", "Jud “Fabio” Birza - Season 21","John Cochran - Season 26","Rob Marino - Season 22" },
-                "Survivor Winners", QuestionType.Normal));
+            string path = @"C:\Users\Ryan\Documents\Code Term 2\Connecting wall\Connecting wall\Resources\Questions\";
+            string[] items = readfile(path + "QuThree1.txt");
 
-            _round3A.Add(new Question(new List<string> { "Wooden Fence", "Barbed Wire", "Soccer Cleats", "Cactus " }, new List<string>
-            { "Top of fence", "Covered in spikes","Spikes on the bottom","Covered in spikes" },
-                "Things with spikes", QuestionType.Normal));
+            _round3A.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
 
-            _round3A.Add(new Question(new List<string> { "Quebec", "November", "Tango", "Foxtrot" }, new List<string>
-            { "Q", "N","T","F" },
-                "NATO / Phonetic Alphabet", QuestionType.Normal));
+            items = readfile(path + "QuThree2.txt");
+            _round3A.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
 
-            _round3A.Add(new Question(new List<string> { "Feather", "Marker", "Brush", "Pencil" }, new List<string>
-            { "People wrote with feather and ink.", "Markers are used to write for labels.",
-                "Brush is used to write characters in different languages","One of the most popular writing tools today for everything" },
-                "Writing Utensils.", QuestionType.Normal));
+            items = readfile(path + "QuThree3.txt");
+            _round3A.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
+
+            items = readfile(path + "QuThree4.txt");
+            _round3A.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
         }
 
         public static void SetUpQuestions3B()
         {
-            _round3B.Add(new Question(new List<string> { "Apple", "Chipotle", "Dunkin Donuts", "KFC" }, new List<string>
-            { "apple", "dried ripe jalapeño chili pepper","doughnut","C = Chicken" },
-                "Companies with foods in their names", QuestionType.Normal));
+            //  @"C:\Users\Ryan\Documents\Code Term 2\Connecting wall\"
+            string solutionFolder = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\..\..\"));
 
-            _round3B.Add(new Question(new List<string> { "Mourning", "Outing", "Meaning", "King" }, new List<string>
-            { "Noun: the expression of deep sorrow for someone who has died", "Noun: trip taken for pleasure",
-                "Noun: what is meant by a word, text, concept, or action","Noun: the male ruler of an independent state" },
-                "Non-verbs ending in “ing” ", QuestionType.Normal));
+            string path = solutionFolder + @"\Resources\Questions\";
+            string[] items = readfile(path + "QuThree5.txt");
 
-            _round3B.Add(new Question(new List<string> { "Gypsy", "Myth", "Rhythm", "Fry" }, new List<string>
-            { "Gypsy", "Myth","Rhythm","Fry" },
-                "No vowels", QuestionType.Normal));
+            _round3B.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
 
-            _round3B.Add(new Question(new List<string> { "Torgue", "Blue Shell", "Creeper", "Red Barrels" }, new List<string>
-            { "Weapons manufacturer in Borderlands. All their weapons shoot explosions.", "Mario kart- will blow up the player in first place",
-                "Minecraft enemy that blows itself up as a form of attack","Most typical type of shootable explosion in video games." },
-                "Things that go boom in video games", QuestionType.Normal));
+            items = readfile(path + "QuThree6.txt");
+            _round3B.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
+
+            items = readfile(path + "QuThree7.txt");
+            _round3B.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
+
+            items = readfile(path + "QuThree8.txt");
+            _round3B.Add(new Question(new List<string> { items[0], items[1], items[2], items[3] },
+             new List<string> { items[4], items[5], items[6], items[7] },
+             items[8], (QuestionType)Int32.Parse(items[9])));
         }
 
-        /// <summary>
-        /// will return a question based on a round given
-        /// </summary>
-        /// <param name="x">_round number</param>
-        /// <returns>Question</returns>
-        /// <exception cref="Exception">if not in range</exception>
+        //get individual question
         public static Question GetRound1Question(int x)
         {
             if (x > 6 || x < 1)
@@ -162,20 +191,13 @@ namespace Connecting_wall.Logic
             return _round2[x - 1];
         }
 
-        /// <summary>
-        /// will check 4 items clicked and see if they belong to the same connection
-        /// </summary>
-        /// <param name="a">item 1</param>
-        /// <param name="b">item 2</param>
-        /// <param name="c">item 3</param>
-        /// <param name="d">item 4</param>
-        /// <returns>bool</returns>
+        //Conecting wall checker
         public static bool CheckRound3AQuestions(string a,string b,string c,string d)
         {
             foreach (Question question in Round3A)
             {
                 bool isTrue = question.CheckItems(a,b,c,d);
-                if (isTrue == true)
+                if (isTrue)
                     return true;
             }
             return false;
@@ -186,15 +208,13 @@ namespace Connecting_wall.Logic
             foreach (Question question in Round3B)
             {
                 bool isTrue = question.CheckItems(a, b, c, d);
-                if (isTrue == true)
+                if (isTrue)
                     return true;
             }
             return false;
         }
 
-        /// <summary>
-        /// Will setup all the questions so that all apps can use
-        /// </summary>
+        
         public static void SetUpAllQuestions()
         {
             SetUpQuestions1();

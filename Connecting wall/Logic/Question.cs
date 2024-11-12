@@ -16,11 +16,13 @@ namespace Connecting_wall.Logic
     /// </summary>
     public class Question
     {
+        //items 
         private List<string> _items = new List<string>();
         private List<string> _description = new List<string>();
         private string _connection;
         private QuestionType _type;
 
+        //setters and getters
         public List<string> Item
         {
             get { return _items; }
@@ -73,15 +75,7 @@ namespace Connecting_wall.Logic
         }
 
 
-        //This is for the connecting wall. checks if four items are in a conection
-        /// <summary>
-        /// Will check if 4 items match to one question
-        /// </summary>
-        /// <param name="item1"> first item</param>
-        /// <param name="item2"> second item </param>
-        /// <param name="item3"> third item</param>
-        /// <param name="item4">forth item</param>
-        /// <returns>bool</returns>
+        //for connecting wall checking
         public bool CheckItems(string item1,string item2,string item3,string item4) 
         {
             if (!Item.Contains(item1))

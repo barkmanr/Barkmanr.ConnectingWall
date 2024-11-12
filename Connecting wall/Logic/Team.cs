@@ -9,16 +9,15 @@ using System.Xml.Linq;
 
 namespace Connecting_wall.Logic
 {
-    /// <summary>
-    /// Team class containing all the team properties and makes use of INotifyPropertyChanged to catch changes in properties.
-    /// </summary>
+    // Team class containing all the team properties and makes use of INotifyPropertyChanged to catch changes in properties.
+    
     public class Team : INotifyPropertyChanged
     {
         private int _teamScore; // Team score variable
         private string _teamName; // Team name variable
-        /// <summary>
-        /// Team score property that will not take score values under zero.
-        /// </summary>
+        
+        // Team score property that will not take score values under zero.
+        
         public int TeamScore
         {
             get { return _teamScore; }
@@ -30,9 +29,6 @@ namespace Connecting_wall.Logic
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(TeamScore)));
             }
         }
-        /// <summary>
-        /// Team name property that will not that blank/null values.
-        /// </summary>
         public string TeamName
         {
             get { return _teamName; }

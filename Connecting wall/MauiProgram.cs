@@ -4,7 +4,7 @@ using Connecting_wall.Views;
 
 namespace Connecting_wall;
 
-public static class MauiProgram
+public static class MauiProgram //test
 {
 	public static MauiApp CreateMauiApp()
 	{

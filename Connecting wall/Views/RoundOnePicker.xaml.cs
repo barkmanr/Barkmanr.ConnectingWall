@@ -10,12 +10,7 @@ public partial class RoundOnePicker : ContentPage
     Team _team1;
     Team _team2;
     IAudioManager _audioManager;
-    /// <summary>
-    /// RoundOnePicker constructor
-    /// </summary>
-    /// <param name="team1"></param>
-    /// <param name="team2"></param>
-    /// <param name="audioManager"></param>
+    
 	public RoundOnePicker(Team team1, Team team2, IAudioManager audioManager)
 	{
 		InitializeComponent();
@@ -25,11 +20,7 @@ public partial class RoundOnePicker : ContentPage
         Team2ScoreLabel.BindingContext = _team2;
         _audioManager = audioManager;
 	}
-    /// <summary>
-    /// Event handler for raising score
-    /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="e"></param>
+    
     private void WhenUpClicked1(object sender, EventArgs e)
     {
         _team1.TeamScore++;

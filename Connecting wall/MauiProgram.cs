@@ -24,5 +24,5 @@ public static class MauiProgram //test
 #endif
 
 		return builder.Build();
-	}
+	} //test
 }
